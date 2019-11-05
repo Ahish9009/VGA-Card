@@ -23,13 +23,13 @@ module screen_design(
 	input rst,
 	output h_sync,
 	output v_sync,
-	output r_out,
-	output g_out,
-	output b_out
+	output [3:0] r_out,
+	output [3:0] g_out,
+	output [3:0] b_out
 );
 
 //---------------GENERATING PIXEL CLOCK----------------------
-reg count = 0;
+reg count = 0, pix_clk;
 
 always @(posedge clk) begin
 
@@ -66,10 +66,10 @@ pixel_itr show(
 //----------GENERATING WINDOWS LOGO(4 SQUARES)---------------
 
 wire win1, win2, win3, win4;
-assign win1 = (( x > 255) & (y > 40) & ( x < 305 ) & ( y < 90 )) ? 1 : 0;
-assign win2 = (( x > 335) & (y > 40) & ( x < 385 ) & ( y < 90 )) ? 1 : 0;
-assign win3 = (( x > 255) & (y > 120) & ( x < 305 ) & ( y < 170 )) ? 1 : 0;
-assign win4 = (( x > 335) & (y > 120) & ( x < 385 ) & ( y < 170 )) ? 1 : 0;
+assign win1 = (( pix_x > 255) & (pix_y > 40) & ( pix_x < 305 ) & ( pix_y < 90 )) ? 1 : 0;
+assign win2 = (( pix_x > 335) & (pix_y > 40) & ( pix_x < 385 ) & ( pix_y < 90 )) ? 1 : 0;
+assign win3 = (( pix_x > 255) & (pix_y > 120) & ( pix_x < 305 ) & ( pix_y < 170 )) ? 1 : 0;
+assign win4 = (( pix_x > 335) & (pix_y > 120) & ( pix_x < 385 ) & ( pix_y < 170 )) ? 1 : 0;
 
 assign r_out[3] = win1 | win4;
 assign g_out[3] = win2 | win4;
