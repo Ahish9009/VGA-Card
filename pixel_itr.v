@@ -25,12 +25,14 @@ module pixel_itr(
     // --------------- SYNC SIGNALS BLOCK ---------------
     if (h_pos >= h_sync_strt & h_pos < h_sync_end) begin
         assign h_sync = 0;
+    end
     else
         assign h_sync = 1;
     end  
 
     if (v_pos >= v_sync_strt & v_pos < v_sync_end) begin
         assign v_sync = 0;
+    end
     else
         assign v_sync = 1;
     end
@@ -40,12 +42,14 @@ module pixel_itr(
     // -------------- PIXEL POSITION BLOCK --------------
     if (h_pos >= h_draw_min) begin
         assign pix_x = h_pos;
+    end
     else
         assign pix_x = 0;        
     end
 
     if (v_pos <= v_draw_max) begin
         assign pix_y = v_pos;
+    end
     else
         assign pix_y = v_draw_max;        
     end
@@ -54,6 +58,7 @@ module pixel_itr(
     // -------- BLANKING / DRAWING PERIOD BLOCK ---------
     if (h_pos < h_draw_min | v_pos > v_draw_max) begin
         assign draw_active = 0;
+    end
     else 
         assign draw_active = 1;
     end
@@ -74,6 +79,7 @@ module pixel_itr(
         if(pix_clk) begin
             if (h_pos < h_max) begin
                 h_pos = h_pos + 1; 
+            end
             else
                 assign h_pos = 0;
                 assign v_pos = v_pos + 1;
