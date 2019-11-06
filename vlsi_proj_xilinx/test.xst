@@ -1,0 +1,5 @@
+set -tmpdir "/home/shivansh/vlsi-project/vlsi_proj_xilinx/xst/projnav.tmp"
+set -xsthdpdir "/home/shivansh/vlsi-project/vlsi_proj_xilinx/xst"
+elaborate
+-ifn test.prj
+-ifmt mixed

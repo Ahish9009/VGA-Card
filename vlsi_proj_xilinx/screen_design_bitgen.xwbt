@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=/home/shivansh/vlsi-project/vlsi_proj_xilinx/screen_design.ncd
+OUTFILE=/home/shivansh/vlsi-project/vlsi_proj_xilinx/screen_design.bit
+FAMILY=Spartan3E
+PART=xc3s500e-4fg320
+WORKINGDIR=/home/shivansh/vlsi-project/vlsi_proj_xilinx
+LICENSE=WebPack
+USER_INFO=211780768_0_0_735

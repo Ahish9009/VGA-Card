@@ -1,0 +1,17 @@
+[Inputs]
+i_clk
+i_pix_stb
+i_rst
+[Outputs]
+o_hs
+o_vs
+o_blanking
+o_active
+o_screenend
+o_animate
+=o_x[9:0]=
+=o_y[8:0]=
+[BiDir]
+[ATTRIBUTES]
+VeriModel test
+

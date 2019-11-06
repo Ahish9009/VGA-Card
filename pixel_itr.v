@@ -21,10 +21,10 @@ module pixel_itr(
     parameter v_max = 525 - 1;
 
     reg [9:0] h_pos, v_pos; 
-	
+	 
     // --------------- SYNC SIGNALS BLOCK ---------------
-    assign h_sync = (h_pos >= h_sync_strt & h_pos < h_sync_end) ? 0 : 1;
-    assign v_sync = (v_pos >= v_sync_strt & v_pos < v_sync_end) ? 0 : 1;
+    assign h_sync = (h_pos >= h_sync_strt && h_pos < h_sync_end) ? 0 : 1;
+    assign v_sync = (v_pos >= v_sync_strt && v_pos < v_sync_end) ? 0 : 1;
     // --------------------------------------------------
 
     // -------------- PIXEL POSITION BLOCK --------------

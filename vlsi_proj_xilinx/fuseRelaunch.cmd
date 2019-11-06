@@ -1,0 +1,1 @@
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/shivansh/vlsi-project/vlsi_proj_xilinx/disp_tb_isim_beh.exe" -prj "/home/shivansh/vlsi-project/vlsi_proj_xilinx/disp_tb_beh.prj" "work.disp_tb" "work.glbl" 

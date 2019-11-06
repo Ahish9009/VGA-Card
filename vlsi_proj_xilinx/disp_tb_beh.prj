@@ -1,0 +1,3 @@
+verilog work "test.v"
+verilog work "disp_tb.v"
+verilog work "/home/shivansh/xilinx/ISE_DS/ISE//verilog/src/glbl.v"
