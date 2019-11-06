@@ -26,11 +26,6 @@ module screen_design(
 	output r_out,
 	output g_out,
 	output b_out,
-	output temp, 
-	output win1,
-	output win2, 
-	output win3, 
-	output win4
 );
 
 //---------------GENERATING PIXEL CLOCK----------------------
