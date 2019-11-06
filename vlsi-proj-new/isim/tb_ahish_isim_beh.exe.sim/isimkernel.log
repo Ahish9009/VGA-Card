@@ -1,0 +1,29 @@
+Command line:
+   tb_ahish_isim_beh.exe
+     -simmode  gui
+     -simrunnum  0
+     -socket  38819
+
+Wed Nov  6 14:40:24 2019
+
+
+ Elaboration Time: 0.01 sec
+
+ Current Memory Usage: 181.51 Meg
+
+ Total Signals          : 30
+ Total Nets             : 40
+ Total Signal Drivers   : 15
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 20
+ Total Traceable Variables  : 31
+ Total Scalar Nets and Variables : 398
+Total Line Count : 40
+
+ Total Simulation Time: 2.73 sec
+
+ Current Memory Usage: 257.012 Meg
+
+Wed Nov  6 14:41:35 2019
+

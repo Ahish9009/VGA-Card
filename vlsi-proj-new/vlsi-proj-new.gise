@@ -22,45 +22,96 @@
   <sourceproject xmlns="http://www.xilinx.com/XMLSchema" xil_pn:fileType="FILE_XISE" xil_pn:name="vlsi-proj-new.xise"/>
 
   <files xmlns="http://www.xilinx.com/XMLSchema">
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="_ngo"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/map.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/par.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/trce.xmsgs"/>
+    <file xil_pn:fileType="FILE_XMSGS" xil_pn:name="_xmsgs/xst.xmsgs"/>
     <file xil_pn:fileType="FILE_LOG" xil_pn:name="fuse.log"/>
     <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="isim"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_CMD" xil_pn:name="isim.cmd"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_LOG" xil_pn:name="isim.log"/>
-    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="pixel_itr_tb_beh.prj"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGDBUILD_LOG" xil_pn:name="pixel_itr.bld"/>
+    <file xil_pn:fileType="FILE_CMD_LOG" xil_pn:name="pixel_itr.cmd_log"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_LSO" xil_pn:name="pixel_itr.lso"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="pixel_itr.ncd" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGC" xil_pn:name="pixel_itr.ngc"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGD" xil_pn:name="pixel_itr.ngd"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGR" xil_pn:name="pixel_itr.ngr"/>
+    <file xil_pn:fileType="FILE_PAD_MISC" xil_pn:name="pixel_itr.pad"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAR_REPORT" xil_pn:name="pixel_itr.par" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PCF" xil_pn:name="pixel_itr.pcf" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="pixel_itr.prj"/>
+    <file xil_pn:fileType="FILE_TRCE_MISC" xil_pn:name="pixel_itr.ptwx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_STX" xil_pn:name="pixel_itr.stx"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_REPORT" xil_pn:name="pixel_itr.syr"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_TXT_REPORT" xil_pn:name="pixel_itr.twr" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_TIMING_XML_REPORT" xil_pn:name="pixel_itr.twx" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_UNROUTES" xil_pn:name="pixel_itr.unroutes" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XPI" xil_pn:name="pixel_itr.xpi"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST" xil_pn:name="pixel_itr.xst"/>
+    <file xil_pn:fileType="FILE_NCD" xil_pn:name="pixel_itr_guide.ncd" xil_pn:origination="imported"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="pixel_itr_map.map" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_MAP_REPORT" xil_pn:name="pixel_itr_map.mrp" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NCD" xil_pn:name="pixel_itr_map.ncd" xil_pn:subbranch="Map"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_NGM" xil_pn:name="pixel_itr_map.ngm" xil_pn:subbranch="Map"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="pixel_itr_map.xrpt"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="pixel_itr_ngdbuild.xrpt"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_EXCEL_REPORT" xil_pn:name="pixel_itr_pad.csv" xil_pn:subbranch="Par"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_PAD_TXT_REPORT" xil_pn:name="pixel_itr_pad.txt" xil_pn:subbranch="Par"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="pixel_itr_par.xrpt"/>
+    <file xil_pn:fileType="FILE_HTML" xil_pn:name="pixel_itr_summary.html"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="pixel_itr_summary.xml"/>
+    <file xil_pn:branch="Implementation" xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="pixel_itr_tb_beh.prj"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="pixel_itr_tb_isim_beh.exe"/>
     <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="pixel_itr_tb_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_WEBTALK" xil_pn:name="pixel_itr_usage.xml"/>
+    <file xil_pn:fileType="FILE_XRPT" xil_pn:name="pixel_itr_xst.xrpt"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="tb_ahish_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_XST_PROJECT" xil_pn:name="tbscreen_ahish_beh.prj"/>
+    <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_ISIM_EXE" xil_pn:name="tbscreen_ahish_isim_beh.exe"/>
+    <file xil_pn:fileType="FILE_ISIM_MISC" xil_pn:name="tbscreen_ahish_isim_beh.wdb"/>
+    <file xil_pn:fileType="FILE_FITTER_REPORT" xil_pn:name="webtalk_pn.xml"/>
     <file xil_pn:branch="BehavioralSim" xil_pn:fileType="FILE_INI" xil_pn:name="xilinxsim.ini"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xlnx_auto_0_xdb"/>
+    <file xil_pn:fileType="FILE_DIRECTORY" xil_pn:name="xst"/>
   </files>
 
   <transforms xmlns="http://www.xilinx.com/XMLSchema">
     <transform xil_pn:end_ts="1573030584" xil_pn:name="TRAN_copyInitialToAbstractSimulation" xil_pn:start_ts="1573030584">
       <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1573030881" xil_pn:in_ck="-1093561230138732280" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1573030881">
+    <transform xil_pn:end_ts="1573031722" xil_pn:in_ck="-6519306208741542349" xil_pn:name="TRAN_copyAbstractToPostAbstractSimulation" xil_pn:start_ts="1573031722">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../pixel_itr.v"/>
-      <outfile xil_pn:name="pixel_itr_tb.v"/>
+      <outfile xil_pn:name="../screen_design.v"/>
+      <outfile xil_pn:name="tb_ahish.v"/>
+      <outfile xil_pn:name="tbscreen_ahish.v"/>
     </transform>
-    <transform xil_pn:end_ts="1573030584" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="-6341728144289361796" xil_pn:start_ts="1573030584">
+    <transform xil_pn:end_ts="1573031598" xil_pn:name="TRAN_xawsToSimhdl" xil_pn:prop_ck="8310007127096974489" xil_pn:start_ts="1573031598">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1573030584" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="-3755730784235520066" xil_pn:start_ts="1573030584">
+    <transform xil_pn:end_ts="1573031598" xil_pn:name="TRAN_schematicsToHdlSim" xil_pn:prop_ck="3974917782470418715" xil_pn:start_ts="1573031598">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1573030584" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-4927480611009086353" xil_pn:start_ts="1573030584">
+    <transform xil_pn:end_ts="1573031598" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="5813654628307061368" xil_pn:start_ts="1573031598">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1573030881" xil_pn:in_ck="-1093561230138732280" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1573030881">
+    <transform xil_pn:end_ts="1573031722" xil_pn:in_ck="-6519306208741542349" xil_pn:name="TRAN_copyPostAbstractToPreSimulation" xil_pn:start_ts="1573031722">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="../pixel_itr.v"/>
-      <outfile xil_pn:name="pixel_itr_tb.v"/>
+      <outfile xil_pn:name="../screen_design.v"/>
+      <outfile xil_pn:name="tb_ahish.v"/>
+      <outfile xil_pn:name="tbscreen_ahish.v"/>
     </transform>
-    <transform xil_pn:end_ts="1573030882" xil_pn:in_ck="-1093561230138732280" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="4812561053586375961" xil_pn:start_ts="1573030881">
+    <transform xil_pn:end_ts="1573031724" xil_pn:in_ck="-6519306208741542349" xil_pn:name="TRAN_ISimulateBehavioralModelRunFuse" xil_pn:prop_ck="-372437920762470381" xil_pn:start_ts="1573031722">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
@@ -68,16 +119,127 @@
       <outfile xil_pn:name="fuse.log"/>
       <outfile xil_pn:name="isim"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="pixel_itr_tb_beh.prj"/>
-      <outfile xil_pn:name="pixel_itr_tb_isim_beh.exe"/>
+      <outfile xil_pn:name="tbscreen_ahish_beh.prj"/>
+      <outfile xil_pn:name="tbscreen_ahish_isim_beh.exe"/>
       <outfile xil_pn:name="xilinxsim.ini"/>
     </transform>
-    <transform xil_pn:end_ts="1573030882" xil_pn:in_ck="8162785555951177940" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="-4459805305919985412" xil_pn:start_ts="1573030882">
+    <transform xil_pn:end_ts="1573031814" xil_pn:in_ck="-2075551515418070910" xil_pn:name="TRAN_ISimulateBehavioralModel" xil_pn:prop_ck="8779686540932304941" xil_pn:start_ts="1573031814">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
       <outfile xil_pn:name="isim.cmd"/>
       <outfile xil_pn:name="isim.log"/>
-      <outfile xil_pn:name="pixel_itr_tb_isim_beh.wdb"/>
+      <outfile xil_pn:name="tbscreen_ahish_isim_beh.wdb"/>
+    </transform>
+    <transform xil_pn:end_ts="1573031104" xil_pn:name="TRAN_copyInitialToXSTAbstractSynthesis" xil_pn:start_ts="1573031104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1573031104" xil_pn:name="TRAN_schematicsToHdl" xil_pn:prop_ck="-1943945693041346487" xil_pn:start_ts="1573031104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1573031104" xil_pn:name="TRAN_regenerateCores" xil_pn:prop_ck="-4927480611009086353" xil_pn:start_ts="1573031104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1573031104" xil_pn:name="TRAN_SubProjectAbstractToPreProxy" xil_pn:start_ts="1573031104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+    </transform>
+    <transform xil_pn:end_ts="1573031104" xil_pn:name="TRAN_xawsTohdl" xil_pn:prop_ck="-7856592026095388473" xil_pn:start_ts="1573031104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+    </transform>
+    <transform xil_pn:end_ts="1573031104" xil_pn:name="TRAN_SubProjectPreToStructuralProxy" xil_pn:prop_ck="-3893270297158069842" xil_pn:start_ts="1573031104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:end_ts="1573031104" xil_pn:name="TRAN_platgen" xil_pn:prop_ck="3858484965397461689" xil_pn:start_ts="1573031104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:end_ts="1573031110" xil_pn:in_ck="-8306394805108717953" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="-7350785921579994046" xil_pn:start_ts="1573031104">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="OutputChanged"/>
+      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
+      <outfile xil_pn:name="pixel_itr.lso"/>
+      <outfile xil_pn:name="pixel_itr.ngc"/>
+      <outfile xil_pn:name="pixel_itr.ngr"/>
+      <outfile xil_pn:name="pixel_itr.prj"/>
+      <outfile xil_pn:name="pixel_itr.stx"/>
+      <outfile xil_pn:name="pixel_itr.syr"/>
+      <outfile xil_pn:name="pixel_itr.xst"/>
+      <outfile xil_pn:name="pixel_itr_tb_beh.prj"/>
+      <outfile xil_pn:name="pixel_itr_xst.xrpt"/>
+      <outfile xil_pn:name="webtalk_pn.xml"/>
+      <outfile xil_pn:name="xst"/>
+    </transform>
+    <transform xil_pn:end_ts="1573031111" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="-8119192866203924238" xil_pn:start_ts="1573031110">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+    </transform>
+    <transform xil_pn:end_ts="1573031114" xil_pn:in_ck="7831739240900112950" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="-2240356054428709550" xil_pn:start_ts="1573031111">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForProperties"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_ngo"/>
+      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
+      <outfile xil_pn:name="pixel_itr.bld"/>
+      <outfile xil_pn:name="pixel_itr.ngd"/>
+      <outfile xil_pn:name="pixel_itr_ngdbuild.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1573031118" xil_pn:in_ck="7831739240900112951" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-5849673150125579957" xil_pn:start_ts="1573031114">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
+      <outfile xil_pn:name="pixel_itr.pcf"/>
+      <outfile xil_pn:name="pixel_itr_map.map"/>
+      <outfile xil_pn:name="pixel_itr_map.mrp"/>
+      <outfile xil_pn:name="pixel_itr_map.ncd"/>
+      <outfile xil_pn:name="pixel_itr_map.ngm"/>
+      <outfile xil_pn:name="pixel_itr_map.xrpt"/>
+      <outfile xil_pn:name="pixel_itr_summary.xml"/>
+      <outfile xil_pn:name="pixel_itr_usage.xml"/>
+    </transform>
+    <transform xil_pn:end_ts="1573031128" xil_pn:in_ck="-928338727336950576" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1573031118">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
+      <outfile xil_pn:name="pixel_itr.ncd"/>
+      <outfile xil_pn:name="pixel_itr.pad"/>
+      <outfile xil_pn:name="pixel_itr.par"/>
+      <outfile xil_pn:name="pixel_itr.ptwx"/>
+      <outfile xil_pn:name="pixel_itr.unroutes"/>
+      <outfile xil_pn:name="pixel_itr.xpi"/>
+      <outfile xil_pn:name="pixel_itr_pad.csv"/>
+      <outfile xil_pn:name="pixel_itr_pad.txt"/>
+      <outfile xil_pn:name="pixel_itr_par.xrpt"/>
+    </transform>
+    <transform xil_pn:end_ts="1573031128" xil_pn:in_ck="7831739240900112819" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416186" xil_pn:start_ts="1573031126">
+      <status xil_pn:value="SuccessfullyRun"/>
+      <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
+      <outfile xil_pn:name="pixel_itr.twr"/>
+      <outfile xil_pn:name="pixel_itr.twx"/>
     </transform>
   </transforms>
 

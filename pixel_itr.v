@@ -20,7 +20,8 @@ module pixel_itr(
     parameter h_max = 800;           
     parameter v_max = 525 - 1;
 
-    reg [9:0] h_pos, v_pos; 
+    reg [9:0] h_pos=0;
+	 reg [8:0] v_pos=0; 
 	 
     // --------------- SYNC SIGNALS BLOCK ---------------
     assign h_sync = (h_pos >= h_sync_strt && h_pos < h_sync_end) ? 0 : 1;

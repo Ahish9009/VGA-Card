@@ -1,1 +1,1 @@
--intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/shivansh/vlsi-project/vlsi-proj-new/pixel_itr_tb_isim_beh.exe" -prj "/home/shivansh/vlsi-project/vlsi-proj-new/pixel_itr_tb_beh.prj" "work.pixel_itr_tb" "work.glbl" 
+-intstyle "ise" -incremental -lib "unisims_ver" -lib "unimacro_ver" -lib "xilinxcorelib_ver" -o "/home/ahish/Desktop/VLSI-Project/vlsi-project/vlsi-proj-new/tbscreen_ahish_isim_beh.exe" -prj "/home/ahish/Desktop/VLSI-Project/vlsi-project/vlsi-proj-new/tbscreen_ahish_beh.prj" "work.tbscreen_ahish" "work.glbl" 

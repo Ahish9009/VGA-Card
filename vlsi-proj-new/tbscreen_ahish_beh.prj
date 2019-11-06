@@ -1,0 +1,4 @@
+verilog work "../pixel_itr.v"
+verilog work "../screen_design.v"
+verilog work "tbscreen_ahish.v"
+verilog work "/opt/Xilinx/13.4/ISE_DS/ISE//verilog/src/glbl.v"
