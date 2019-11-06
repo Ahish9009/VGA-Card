@@ -1,0 +1,13 @@
+net "clk" loc = "C9";
+net "h_sync" loc = "F15";
+net "v_sync" loc = "F14";
+net "r_out" loc = "H14";
+net "g_out" loc = "H15";
+net "b_out" loc = "G15";
+net "r_out" loc = "R4";
+net "g_out" loc = "F4";
+net "b_out" loc = "P15";
+
+//NET "clk" CLOCK_DEDICATED_ROUTE = FALSE;
+//net "clk" loc = "H13";
+//net "temp" loc = "J14";
