@@ -1,0 +1,27 @@
+# Format: clock  timeReq  slackR/slackF  setupR/setupF  instName/pinName   # cycle(s)
+clk(R)->clk(R)	3.828    -0.096/*        0.162/*         show/h_pos_reg[9]/D    1
+clk(R)->clk(R)	3.777    -0.079/*        0.213/*         show/v_pos_reg[8]/D    1
+clk(R)->clk(R)	3.776    -0.077/*        0.214/*         show/v_pos_reg[9]/D    1
+clk(R)->clk(R)	3.780    -0.071/*        0.210/*         show/v_pos_reg[7]/D    1
+clk(R)->clk(R)	3.783    -0.066/*        0.207/*         show/v_pos_reg[5]/D    1
+clk(R)->clk(R)	3.783    -0.066/*        0.207/*         show/v_pos_reg[2]/D    1
+clk(R)->clk(R)	3.787    -0.061/*        0.203/*         show/v_pos_reg[1]/D    1
+clk(R)->clk(R)	3.787    -0.060/*        0.203/*         show/v_pos_reg[3]/D    1
+clk(R)->clk(R)	3.788    -0.060/*        0.202/*         show/v_pos_reg[4]/D    1
+clk(R)->clk(R)	3.789    -0.058/*        0.201/*         show/v_pos_reg[6]/D    1
+clk(R)->clk(R)	3.836    -0.057/*        0.154/*         show/h_pos_reg[8]/D    1
+clk(R)->clk(R)	3.838    -0.040/*        0.152/*         show/h_pos_reg[1]/D    1
+clk(R)->clk(R)	3.838    -0.038/*        0.152/*         show/h_pos_reg[2]/D    1
+clk(R)->clk(R)	3.838    -0.037/*        0.152/*         show/h_pos_reg[4]/D    1
+clk(R)->clk(R)	3.797    0.014/*         0.193/*         show/h_pos_reg[3]/D    1
+clk(R)->clk(R)	3.803    0.024/*         0.187/*         show/h_pos_reg[7]/D    1
+clk(R)->clk(R)	3.707    0.026/*         0.283/*         show/v_pos_reg[0]/SI    1
+clk(R)->clk(R)	3.809    0.032/*         0.181/*         show/h_pos_reg[5]/D    1
+clk(R)->clk(R)	3.812    0.038/*         0.178/*         show/h_pos_reg[6]/D    1
+clk(R)->clk(R)	3.744    0.121/*         0.246/*         show/h_pos_reg[0]/SI    1
+clk(R)->clk(R)	3.653    1.652/*         0.337/*         show/v_pos_reg[0]/D    1
+clk(R)->clk(R)	3.747    */1.776         */0.243         show/h_pos_reg[0]/D    1
+clk(R)->clk(R)	3.655    */3.266         */0.335         show/v_pos_reg[0]/SE    1
+clk(R)->clk(R)	3.658    */3.274         */0.332         show/h_pos_reg[0]/SE    1
+clk(R)->clk(R)	3.838    3.446/*         0.152/*         count_reg/D    1
+clk(R)->clk(R)	3.820    3.532/*         0.170/*         pix_clk_reg/D    1
