@@ -5,5 +5,35 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
+<msg type="error" file="HDLCompilers" num="26" delta="new" >&quot;<arg fmt="%s" index="1">../screen_design.v</arg>&quot; line <arg fmt="%d" index="2">29</arg> <arg fmt="%s" index="3">unexpected token: &apos;)&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="26" delta="new" >&quot;<arg fmt="%s" index="1">../screen_design.v</arg>&quot; line <arg fmt="%d" index="2">29</arg> <arg fmt="%s" index="3">expecting &apos;)&apos;, found &apos;;&apos;</arg>
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;../screen_design.v&quot; line 37 </arg>&apos;<arg fmt="%s" index="2">count</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;../screen_design.v&quot; line 38 </arg>&apos;<arg fmt="%s" index="2">pix_clk</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;../screen_design.v&quot; line 40 </arg>&apos;<arg fmt="%s" index="2">count</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;../screen_design.v&quot; line 41 </arg>&apos;<arg fmt="%s" index="2">pix_clk</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;../screen_design.v&quot; line 42 </arg>&apos;<arg fmt="%s" index="2">count</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;../screen_design.v&quot; line 45 </arg>&apos;<arg fmt="%s" index="2">pix_clk</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;../screen_design.v&quot; line 46 </arg>&apos;<arg fmt="%s" index="2">count</arg>&apos; has not been declared
+</msg>
+
+<msg type="error" file="HDLCompilers" num="28" delta="new" ><arg fmt="%s" index="1">&quot;../screen_design.v&quot; line 46 </arg>&apos;<arg fmt="%s" index="2">count</arg>&apos; has not been declared
+</msg>
+
 </messages>
 

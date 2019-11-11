@@ -1,0 +1,27 @@
+Running: /home/shivansh/xilinx/ISE_DS/ISE/bin/lin64/unwrapped/fuse -intstyle ise -incremental -lib unisims_ver -lib unimacro_ver -lib xilinxcorelib_ver -o /home/shivansh/vlsi-project/timetoexplore/test_isim_beh.exe -prj /home/shivansh/vlsi-project/timetoexplore/test_beh.prj work.test work.glbl 
+ISim O.87xd (signature 0x8ddf5b5d)
+Number of CPUs detected in this system: 8
+Turning on mult-threading, number of parallel sub-compilation jobs: 16 
+Determining compilation order of HDL files
+Analyzing Verilog file "/home/shivansh/vlsi-project/timetoexplore/../../timetoexplore/vga01/vga640x480.v" into library work
+Analyzing Verilog file "/home/shivansh/vlsi-project/timetoexplore/../../timetoexplore/vga01/top_static.v" into library work
+WARNING:HDLCompiler:751 - "/home/shivansh/vlsi-project/timetoexplore/../../timetoexplore/vga01/top_static.v" Line 22: Redeclaration of ansi port pix_stb is not allowed
+Analyzing Verilog file "/home/shivansh/vlsi-project/timetoexplore/test.v" into library work
+Analyzing Verilog file "/home/shivansh/xilinx/ISE_DS/ISE//verilog/src/glbl.v" into library work
+Starting static elaboration
+WARNING:HDLCompiler:1016 - "/home/shivansh/vlsi-project/timetoexplore/test.v" Line 40: Port pix_stb is not connected to this instance
+WARNING:HDLCompiler:1016 - "/home/shivansh/vlsi-project/timetoexplore/../../timetoexplore/vga01/top_static.v" Line 42: Port o_blanking is not connected to this instance
+Completed static elaboration
+Fuse Memory Usage: 95036 KB
+Fuse CPU Usage: 900 ms
+Compiling module vga640x480
+Compiling module top
+Compiling module test
+Compiling module glbl
+Time Resolution for simulation is 1ps.
+Waiting for 1 sub-compilation(s) to finish...
+Compiled 4 Verilog Units
+Built simulation executable /home/shivansh/vlsi-project/timetoexplore/test_isim_beh.exe
+Fuse Memory Usage: 1179644 KB
+Fuse CPU Usage: 910 ms
+GCC CPU Usage: 400 ms

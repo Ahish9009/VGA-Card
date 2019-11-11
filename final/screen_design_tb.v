@@ -34,7 +34,6 @@ module screen_design_tb;
 	wire r_out;
 	wire g_out;
 	wire b_out;
-	wire temp;
 
 	// Instantiate the Unit Under Test (UUT)
 	screen_design uut (
@@ -44,8 +43,7 @@ module screen_design_tb;
 		.v_sync(v_sync), 
 		.r_out(r_out), 
 		.g_out(g_out), 
-		.b_out(b_out), 
-		.temp(temp)
+		.b_out(b_out)
 	);
 
 	initial begin

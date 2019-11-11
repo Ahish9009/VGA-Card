@@ -77,6 +77,10 @@ assign win4 = (( pix_x > 335) & (pix_y > 120) & ( pix_x < 385 ) & ( pix_y < 170 
 assign r_out = win1 | win4;
 assign g_out = win2 | win4;
 assign b_out = win3;
+
+//assign r_out = 1;
+//assign g_out = 1;
+//assign b_out = 1;
 assign temp = pix_clk;
 
 //-----------------------------------------------------------

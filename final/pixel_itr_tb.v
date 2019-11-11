@@ -31,7 +31,7 @@ module pixel_itr_tb;
 
 	// Outputs
 	wire [9:0] pix_x;
-	wire [8:0] pix_y;
+	wire [9:0] pix_y;
 	wire h_sync;
 	wire v_sync;
 	wire draw_active;
@@ -65,7 +65,7 @@ module pixel_itr_tb;
 
 	end
 	always #2 clk = ~clk;
-	always #4 pix_clk = ~pix_clk;
+	always #2 pix_clk = ~pix_clk;
 	
       
 endmodule

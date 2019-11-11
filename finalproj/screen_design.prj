@@ -1,0 +1,2 @@
+verilog work "../final/pixel_itr.v"
+verilog work "../final/screen_design.v"

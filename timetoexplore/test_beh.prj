@@ -1,0 +1,4 @@
+verilog work "../../timetoexplore/vga01/vga640x480.v"
+verilog work "../../timetoexplore/vga01/top_static.v"
+verilog work "test.v"
+verilog work "/home/shivansh/xilinx/ISE_DS/ISE//verilog/src/glbl.v"

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"/home/shivansh/vlsi-project/timetoexplore/../../timetoexplore/vga01/top_static.v" Line 22: Redeclaration of ansi port <arg fmt="%s" index="1">pix_stb</arg> is not allowed
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/shivansh/vlsi-project/timetoexplore/test.v" Line 40: Port <arg fmt="%s" index="1">pix_stb</arg> is not connected to this instance
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/shivansh/vlsi-project/timetoexplore/../../timetoexplore/vga01/top_static.v" Line 42: Port <arg fmt="%s" index="1">o_blanking</arg> is not connected to this instance
+</msg>
+
+</messages>
+

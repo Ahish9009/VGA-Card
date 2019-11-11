@@ -1,0 +1,29 @@
+Command line:
+   pixel_itr_tb_isim_beh.exe
+     -simmode  gui
+     -simrunnum  1
+     -socket  52821
+
+Wed Nov  6 19:41:38 2019
+
+
+ Elaboration Time: 0 sec
+
+ Current Memory Usage: 181.338 Meg
+
+ Total Signals          : 30
+ Total Nets             : 41
+ Total Signal Drivers   : 15
+ Total Blocks           : 3
+ Total Primitive Blocks : 2
+ Total Processes        : 20
+ Total Traceable Variables  : 31
+ Total Scalar Nets and Variables : 400
+Total Line Count : 40
+
+ Total Simulation Time: 0.6 sec
+
+ Current Memory Usage: 256.84 Meg
+
+Wed Nov  6 19:42:27 2019
+

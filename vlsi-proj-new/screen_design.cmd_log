@@ -1,0 +1,1 @@
+xst -intstyle ise -ifn "/home/shivansh/vlsi-project/vlsi-proj-new/screen_design.xst" -ofn "/home/shivansh/vlsi-project/vlsi-proj-new/screen_design.syr" 

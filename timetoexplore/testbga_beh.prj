@@ -1,0 +1,3 @@
+verilog work "../../timetoexplore/vga01/vga640x480.v"
+verilog work "testbga.v"
+verilog work "/home/shivansh/xilinx/ISE_DS/ISE//verilog/src/glbl.v"

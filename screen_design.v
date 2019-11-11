@@ -25,38 +25,22 @@ module screen_design(
 	output v_sync,
 	output r_out,
 	output g_out,
-	output b_out,
+	output b_out
 );
 
 //---------------GENERATING PIXEL CLOCK----------------------
 reg count = 0, pix_clk = 0;
 
-always @(posedge clk) begin
-	
-	if (rst == 1) begin
-		count <= 0;
-		pix_clk <= 0;
-	end 
-	if (count == 1) begin
-		pix_clk <= 1;
-		count <= 0;
-	end 
-	else begin
-		pix_clk <= 0;
-		count <= count + 1;
-
-	end
-end
 
 //-----------------------------------------------------------
 
 //-------------GETTING CURRENT PIXEL COORDINATES-------------
-wire [9:0] pix_x;
-wire [8:0] pix_y;
+wire [11:0] pix_x;
+wire [11:0] pix_y;
 
 pixel_itr show(
 	.clk(clk),
-   .pix_clk(pix_clk),
+   //.pix_clk(pix_clk),
 	.rst(rst),
 	.pix_x(pix_x),
 	.pix_y(pix_y),
@@ -71,12 +55,11 @@ wire win1, win2, win3, win4;
 assign win1 = (( pix_x > 255) & (pix_y > 40) & ( pix_x < 305 ) & ( pix_y < 90 )) ? 1 : 0;
 assign win2 = (( pix_x > 335) & (pix_y > 40) & ( pix_x < 385 ) & ( pix_y < 90 )) ? 1 : 0;
 assign win3 = (( pix_x > 255) & (pix_y > 120) & ( pix_x < 305 ) & ( pix_y < 170 )) ? 1 : 0;
-assign win4 = (( pix_x > 335) & (pix_y > 120) & ( pix_x < 385 ) & ( pix_y < 170 )) ? 1 : 0;
+assign win4 = (( pix_x > 240) & (pix_y > 0) & (pix_y < 599) & (pix_x < 1000)) ? 1 : 0;
 
-assign r_out = win1 | win4;
-assign g_out = win2 | win4;
-assign b_out = win3;
-assign temp = pix_clk;
+assign r_out = win4;
+assign g_out = 0;
+assign b_out = 0;
 
 //-----------------------------------------------------------
 
