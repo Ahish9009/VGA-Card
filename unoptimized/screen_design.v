@@ -1,23 +1,5 @@
 `timescale 1ns / 1ps
-//////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer: 
-// 
-// Create Date:    22:30:25 11/05/2019 
-// Design Name: 
-// Module Name:    design 
-// Project Name: 
-// Target Devices: 
-// Tool versions: 
-// Description: 
-//
-// Dependencies: 
-//
-// Revision: 
-// Revision 0.01 - File Created
-// Additional Comments: 
-//
-//////////////////////////////////////////////////////////////////////////////////
+
 module screen_design(
 	input clk,
 	input rst,
@@ -35,8 +17,8 @@ reg count = 0, pix_clk = 0;
 //-----------------------------------------------------------
 
 //-------------GETTING CURRENT PIXEL COORDINATES-------------
-wire [11:0] pix_x;
-wire [11:0] pix_y;
+wire [12:0] pix_x;
+wire [12:0] pix_y;
 
 pixel_itr show(
 	.clk(clk),

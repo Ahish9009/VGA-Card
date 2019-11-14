@@ -118,8 +118,8 @@ reg count = 0, pix_clk = 0;
 //-----------------------------------------------------------
 
 //-------------GETTING CURRENT PIXEL COORDINATES-------------
-wire [11:0] pix_x;
-wire [11:0] pix_y;
+wire [10:0] pix_x;
+wire [10:0] pix_y;
 
 pixel_itr show(
 	.clk(clk),

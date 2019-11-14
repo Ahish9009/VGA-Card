@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-11-12T02:38:56</DateModified>
+  <DateModified>2019-11-13T14:57:44</DateModified>
   <ModuleName>screen_design</ModuleName>
   <SummaryTimeStamp>2019-11-12T01:52:14</SummaryTimeStamp>
   <SavedFilePath>/home/shivansh/vlsi-project/newproj/iseconfig/screen_design.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>/home/shivansh/vlsi-project/newproj</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>/home/shivansh/vlsi-project/newproj/</ImplementationReportsDirectory>
   <DateInitialized>2019-11-11T23:39:54</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
