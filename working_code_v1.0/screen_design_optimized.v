@@ -41,7 +41,7 @@ module pixel_itr(
 		
 	// -------------- PIXEL POSITION BLOCK --------------
     // assign pix_x = (h_pos >= h_draw_min) ? h_pos : 0;        
-    assign pix_x = (h_pos >= h_draw_min) ? h_pos : 0;        
+    assign pix_x = (h_pos >= h_draw_min) ? h_pos - h_draw_min : 0;        
 	 assign pix_y = (v_pos <= v_draw_max) ? v_pos : v_draw_max;        
     // --------------------------------------------------
 
@@ -88,8 +88,7 @@ module screen_design(
 	output v_sync,
 	output r_out,
 	output g_out,
-	output b_out,
-	output temp
+	output b_out
 );
 
 //---------------GENERATING PIXEL CLOCK----------------------
@@ -133,21 +132,14 @@ pixel_itr show(
 
 wire win1, win2, win3, win4;
 
-//assign win1 = (( pix_x > 255) & (pix_y > 40) & ( pix_x < 305 ) & ( pix_y < 90 )) ? 1 : 0;
-//assign win2 = (( pix_x > 335) & (pix_y > 40) & ( pix_x < 385 ) & ( pix_y < 90 )) ? 1 : 0;
-//assign win3 = (( pix_x > 255) & (pix_y > 120) & ( pix_x < 305 ) & ( pix_y < 170 )) ? 1 : 0;
-//assign win4 = (( pix_x > 335) & (pix_y > 120) & ( pix_x < 385 ) & ( pix_y < 170 )) ? 1 : 0;
-
-assign win1 = (( pix_x > 300) & (pix_y > 120) & ( pix_x < 500 ) & ( pix_y < 320 )) ? 1 : 0;
-assign win2 = (( pix_x > 505) & (pix_y > 120) & ( pix_x < 705 ) & ( pix_y < 320 )) ? 1 : 0;
-assign win3 = (( pix_x > 300) & (pix_y > 325) & ( pix_x < 500 ) & ( pix_y < 525 )) ? 1 : 0;
-assign win4 = (( pix_x > 505) & (pix_y > 325) & ( pix_x < 705 ) & ( pix_y < 525 )) ? 1 : 0;
-
+assign win1 = (( pix_x > 255) & (pix_y > 40) & ( pix_x < 305 ) & ( pix_y < 90 )) ? 1 : 0;
+assign win2 = (( pix_x > 335) & (pix_y > 40) & ( pix_x < 385 ) & ( pix_y < 90 )) ? 1 : 0;
+assign win3 = (( pix_x > 255) & (pix_y > 120) & ( pix_x < 305 ) & ( pix_y < 170 )) ? 1 : 0;
+assign win4 = (( pix_x > 335) & (pix_y > 120) & ( pix_x < 385 ) & ( pix_y < 170 )) ? 1 : 0;
 
 assign r_out = win1 | win4;
 assign g_out = win2 | win4;
 assign b_out = win3;
-//assign temp = win4;
 
 //-----------------------------------------------------------
 
