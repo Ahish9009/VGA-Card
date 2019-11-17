@@ -40,8 +40,8 @@ def get_condition(x):
     cond = cond.lstrip("|")
     return cond
 
-img = Image.open("me.png")
-img = img.resize((256,192))
+img = Image.open("me2.png")
+img = img.resize((592, 444))
 
 pix_r = (list(img.getdata(0)))
 pix_g = scale(list(img.getdata(1)))

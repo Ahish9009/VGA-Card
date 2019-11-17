@@ -5,7 +5,7 @@ run
 -ifmt mixed
 -ofn screen_design
 -ofmt NGC
--p xc3s500e-4-fg320
+-p xc3s500e-5-fg320
 -top screen_design
 -opt_mode Speed
 -opt_level 1

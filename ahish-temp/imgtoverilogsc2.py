@@ -14,7 +14,7 @@ def scale(x):
 def get_condition(x):
 
     cond = ''
-    sc = 6
+    sc = 2
     
     for i in range(len(x)):
         flag = 0
@@ -42,7 +42,7 @@ def get_condition(x):
     return cond
 
 img = Image.open("me.png")
-img = img.resize((100,75))
+img = img.resize((256,192))
 
 pix_r = (list(img.getdata(0)))
 pix_g = scale(list(img.getdata(1)))

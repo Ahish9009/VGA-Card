@@ -1,7 +1,7 @@
 Release 13.4 - par O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Sun Nov 17 23:29:11 2019
+Mon Nov 18 02:38:31 2019
 
 
 INFO: The IO information is provided in three file formats as part of the Place and Route (PAR) process.  These formats are:
@@ -12,7 +12,7 @@ INFO: The IO information is provided in three file formats as part of the Place 
 INPUT FILE:       screen_design_map.ncd
 OUTPUT FILE:      screen_design_pad.txt
 PART TYPE:        xc3s500e
-SPEED GRADE:      -4
+SPEED GRADE:      -5
 PACKAGE:          fg320
 
 Pinout by Pin Number:
@@ -148,7 +148,7 @@ Pinout by Pin Number:
 |G18       |           |IBUF     |IP                       |UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |H1        |           |DIFFS    |IO_L10N_3                |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |H2        |           |DIFFM    |IO_L10P_3                |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
-|H3        |           |DIFFS    |IO_L09N_3                |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
+|H3        |rst        |IBUF     |IO_L09N_3                |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
 |H4        |           |DIFFM    |IO_L09P_3                |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |H5        |           |DIFFS    |IO_L08N_3                |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |H6        |           |DIFFM    |IO_L08P_3                |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
@@ -181,7 +181,7 @@ Pinout by Pin Number:
 |J17       |           |DIFFM    |IO_L13P_1/A6/RHCLK4/IRDY1|UNUSED   |           |1             |          |         |           |         |         |          |           |                |
 |J18       |           |         |VCCO_1                   |         |           |1             |          |         |           |         |any******|          |           |                |
 |K1        |           |         |VCCO_3                   |         |           |3             |          |         |           |         |2.50     |          |           |                |
-|K2        |rst        |IBUF     |IP                       |INPUT    |LVCMOS25*  |3             |          |         |           |NONE     |         |UNLOCATED |NO         |NONE            |
+|K2        |           |IBUF     |IP                       |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |K3        |           |DIFFM    |IO_L13P_3/LHCLK4/TRDY2   |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |K4        |           |DIFFS    |IO_L13N_3/LHCLK5         |UNUSED   |           |3             |          |         |           |         |         |          |           |                |
 |K5        |           |DIFFS    |IO_L14N_3/LHCLK7         |UNUSED   |           |3             |          |         |           |         |         |          |           |                |

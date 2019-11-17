@@ -3,10 +3,10 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 Loading device for application Rf_Device from file '3s500e.nph' in environment
 /opt/Xilinx/13.4/ISE_DS/ISE/.
    "screen_design" is an NCD, version 3.2, device xc3s500e, package fg320, speed
--4
+-5
 Opened constraints file screen_design.pcf.
 
-Sun Nov 17 23:29:16 2019
+Mon Nov 18 02:38:37 2019
 
 /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/bitgen -intstyle ise -w -g DebugBitstream:No -g Binary:no -g CRC:Enable -g ConfigRate:1 -g ProgPin:PullUp -g DonePin:PullUp -g TckPin:PullUp -g TdiPin:PullUp -g TdoPin:PullUp -g TmsPin:PullUp -g UnusedPin:PullDown -g UserID:0xFFFFFFFF -g DCMShutdown:Disable -g StartUpClk:JtagClk -g DONE_cycle:4 -g GTS_cycle:5 -g GWE_cycle:6 -g LCK_cycle:NoWait -g Security:None -g DonePipe:No -g DriveDone:No screen_design.ncd 
 
