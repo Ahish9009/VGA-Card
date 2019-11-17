@@ -102,82 +102,61 @@
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1573993853" xil_pn:in_ck="-6090040993525174159" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="5472046030791058112" xil_pn:start_ts="1573993847">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="WarningsGenerated"/>
+    <transform xil_pn:end_ts="1573998432" xil_pn:in_ck="-6090040993525174159" xil_pn:name="TRANEXT_xstsynthesize_spartan3e" xil_pn:prop_ck="5472046030791058112" xil_pn:start_ts="1573998427">
+      <status xil_pn:value="FailedRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
-      <status xil_pn:value="OutputChanged"/>
-      <outfile xil_pn:name="_xmsgs/xst.xmsgs"/>
-      <outfile xil_pn:name="screen_design.lso"/>
-      <outfile xil_pn:name="screen_design.ngc"/>
-      <outfile xil_pn:name="screen_design.ngr"/>
-      <outfile xil_pn:name="screen_design.prj"/>
-      <outfile xil_pn:name="screen_design.stx"/>
-      <outfile xil_pn:name="screen_design.syr"/>
-      <outfile xil_pn:name="screen_design.xst"/>
-      <outfile xil_pn:name="screen_design_xst.xrpt"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
-      <outfile xil_pn:name="xst"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
     <transform xil_pn:end_ts="1573993697" xil_pn:in_ck="1565540462359829953" xil_pn:name="TRAN_compileBCD2" xil_pn:prop_ck="4159266258188268699" xil_pn:start_ts="1573993697">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
     </transform>
-    <transform xil_pn:end_ts="1573993857" xil_pn:in_ck="-7480853789405814528" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="9216236471945031868" xil_pn:start_ts="1573993853">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="_ngo"/>
-      <outfile xil_pn:name="_xmsgs/ngdbuild.xmsgs"/>
-      <outfile xil_pn:name="screen_design.bld"/>
-      <outfile xil_pn:name="screen_design.ngd"/>
-      <outfile xil_pn:name="screen_design_ngdbuild.xrpt"/>
+    <transform xil_pn:end_ts="1573998293" xil_pn:in_ck="-7480853789405814528" xil_pn:name="TRANEXT_ngdbuild_FPGA" xil_pn:prop_ck="9216236471945031868" xil_pn:start_ts="1573998289">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputAdded"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1573993861" xil_pn:in_ck="-4589505415474379999" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1309755933173654900" xil_pn:start_ts="1573993857">
+    <transform xil_pn:end_ts="1573998297" xil_pn:in_ck="-4589505415474379999" xil_pn:name="TRANEXT_map_spartan3" xil_pn:prop_ck="-1309755933173654900" xil_pn:start_ts="1573998293">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="_xmsgs/map.xmsgs"/>
-      <outfile xil_pn:name="screen_design.pcf"/>
-      <outfile xil_pn:name="screen_design_map.map"/>
-      <outfile xil_pn:name="screen_design_map.mrp"/>
-      <outfile xil_pn:name="screen_design_map.ncd"/>
-      <outfile xil_pn:name="screen_design_map.ngm"/>
-      <outfile xil_pn:name="screen_design_map.xrpt"/>
-      <outfile xil_pn:name="screen_design_summary.xml"/>
-      <outfile xil_pn:name="screen_design_usage.xml"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1573993872" xil_pn:in_ck="-8073417165181241510" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1573993861">
+    <transform xil_pn:end_ts="1573998308" xil_pn:in_ck="-8073417165181241510" xil_pn:name="TRANEXT_par_spartan3" xil_pn:prop_ck="-5563652517805085498" xil_pn:start_ts="1573998297">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="_xmsgs/par.xmsgs"/>
-      <outfile xil_pn:name="screen_design.ncd"/>
-      <outfile xil_pn:name="screen_design.pad"/>
-      <outfile xil_pn:name="screen_design.par"/>
-      <outfile xil_pn:name="screen_design.ptwx"/>
-      <outfile xil_pn:name="screen_design.unroutes"/>
-      <outfile xil_pn:name="screen_design.xpi"/>
-      <outfile xil_pn:name="screen_design_pad.csv"/>
-      <outfile xil_pn:name="screen_design_pad.txt"/>
-      <outfile xil_pn:name="screen_design_par.xrpt"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1573993877" xil_pn:in_ck="3194371952724654300" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="5775731546441462550" xil_pn:start_ts="1573993872">
-      <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="_xmsgs/bitgen.xmsgs"/>
-      <outfile xil_pn:name="screen_design.bgn"/>
-      <outfile xil_pn:name="screen_design.bit"/>
-      <outfile xil_pn:name="screen_design.drc"/>
-      <outfile xil_pn:name="screen_design.ut"/>
-      <outfile xil_pn:name="usage_statistics_webtalk.html"/>
-      <outfile xil_pn:name="webtalk.log"/>
-      <outfile xil_pn:name="webtalk_pn.xml"/>
+    <transform xil_pn:end_ts="1573994453" xil_pn:in_ck="3194371952724654300" xil_pn:name="TRANEXT_bitFile_spartan3e" xil_pn:prop_ck="5775731546441462550" xil_pn:start_ts="1573994448">
+      <status xil_pn:value="AbortedRun"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="InputChanged"/>
+      <status xil_pn:value="InputRemoved"/>
     </transform>
-    <transform xil_pn:end_ts="1573993872" xil_pn:in_ck="1134134773476846109" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1573993870">
+    <transform xil_pn:end_ts="1573998308" xil_pn:in_ck="1134134773476846109" xil_pn:name="TRAN_postRouteTrce" xil_pn:prop_ck="445577401284416187" xil_pn:start_ts="1573998306">
       <status xil_pn:value="SuccessfullyRun"/>
-      <status xil_pn:value="ReadyToRun"/>
-      <outfile xil_pn:name="_xmsgs/trce.xmsgs"/>
-      <outfile xil_pn:name="screen_design.twr"/>
-      <outfile xil_pn:name="screen_design.twx"/>
+      <status xil_pn:value="NotReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="OutOfDateForPredecessor"/>
+      <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputRemoved"/>
+      <status xil_pn:value="OutputRemoved"/>
     </transform>
   </transforms>
 

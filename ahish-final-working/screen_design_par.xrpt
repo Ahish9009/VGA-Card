@@ -5,7 +5,7 @@
     The structure and the elements are likely to change over the next few releases.
     This means code written to parse this file will need to be revisited each subsequent release.-->
 
-  <application stringID="par" timeStamp="Sun Nov 17 18:01:03 2019">
+  <application stringID="par" timeStamp="Sun Nov 17 19:14:59 2019">
     <section stringID="User_Env">
       <table stringID="User_EnvVar">
         <column stringID="variable"/>
@@ -67,7 +67,7 @@
     </task>
     <task stringID="PAR_DEVICE_UTILIZATION">
       <section stringID="PAR_DESIGN_SUMMARY">
-        <item AVAILABLE="4656" dataType="int" stringID="PAR_SLICES" value="44"></item>
+        <item AVAILABLE="4656" dataType="int" stringID="PAR_SLICES" value="46"></item>
       </section>
     </task>
     <task stringID="PAR_PAR">
@@ -96,7 +96,7 @@
             <item label="Routed" stringID="ROUTED" value="ROUTED"/>
             <item label="Resource" stringID="RESOURCE" value="BUFGMUX_X2Y11"/>
             <item label="Locked" stringID="LOCKED" value="No"/>
-            <item dataType="float" label="Fanout" stringID="FANOUT" value="12.000000"/>
+            <item dataType="float" label="Fanout" stringID="FANOUT" value="13.000000"/>
             <item dataType="float" label="Net Skew(ns)" stringID="NET_SKEW" value="0.025000"/>
             <item dataType="float" label="Max Delay(ns)" stringID="MAX_DELAY" value="0.129000"/>
           </row>
