@@ -178,20 +178,18 @@ Unit <pixel_itr> synthesized.
 
 Synthesizing Unit <screen_design>.
     Related source file is "screen_design_optimized.v".
-WARNING:Xst:1306 - Output <temp> is never assigned.
+WARNING:Xst:1780 - Signal <win4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
     Found 1-bit register for signal <count>.
     Found 1-bit register for signal <pix_clk>.
-    Found 10-bit comparator greater for signal <win1$cmp_gt0000> created at line 141.
-    Found 10-bit comparator greater for signal <win1$cmp_gt0001> created at line 141.
-    Found 10-bit comparator less for signal <win1$cmp_lt0000> created at line 141.
-    Found 10-bit comparator less for signal <win1$cmp_lt0001> created at line 141.
-    Found 10-bit comparator greater for signal <win2$cmp_gt0000> created at line 142.
-    Found 10-bit comparator less for signal <win2$cmp_lt0000> created at line 142.
-    Found 10-bit comparator greater for signal <win3$cmp_gt0000> created at line 143.
-    Found 10-bit comparator less for signal <win3$cmp_lt0000> created at line 143.
+    Found 10-bit comparator greater for signal <win1$cmp_gt0000> created at line 145.
+    Found 10-bit comparator less for signal <win1$cmp_lt0000> created at line 145.
+    Found 10-bit comparator greater for signal <win2$cmp_gt0000> created at line 146.
+    Found 10-bit comparator less for signal <win2$cmp_lt0000> created at line 146.
+    Found 10-bit comparator greater for signal <win3$cmp_gt0000> created at line 147.
+    Found 10-bit comparator less for signal <win3$cmp_lt0000> created at line 147.
     Summary:
 	inferred   2 D-type flip-flop(s).
-	inferred   8 Comparator(s).
+	inferred   6 Comparator(s).
 Unit <screen_design> synthesized.
 
 
@@ -204,10 +202,10 @@ Macro Statistics
 # Registers                                            : 4
  1-bit register                                        : 2
  10-bit register                                       : 2
-# Comparators                                          : 17
+# Comparators                                          : 15
  10-bit comparator greatequal                          : 3
- 10-bit comparator greater                             : 5
- 10-bit comparator less                                : 7
+ 10-bit comparator greater                             : 4
+ 10-bit comparator less                                : 6
  10-bit comparator lessequal                           : 1
  11-bit comparator less                                : 1
 
@@ -226,10 +224,10 @@ Macro Statistics
  10-bit adder                                          : 2
 # Registers                                            : 22
  Flip-Flops                                            : 22
-# Comparators                                          : 17
+# Comparators                                          : 15
  10-bit comparator greatequal                          : 3
- 10-bit comparator greater                             : 5
- 10-bit comparator less                                : 7
+ 10-bit comparator greater                             : 4
+ 10-bit comparator less                                : 6
  10-bit comparator lessequal                           : 1
  11-bit comparator less                                : 1
 
@@ -280,21 +278,21 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 8
+# IOs                              : 7
 
 Cell Usage :
-# BELS                             : 134
+# BELS                             : 124
 #      GND                         : 1
 #      INV                         : 3
 #      LUT1                        : 18
-#      LUT2                        : 17
-#      LUT3                        : 6
+#      LUT2                        : 18
+#      LUT3                        : 5
 #      LUT3_L                      : 1
-#      LUT4                        : 42
+#      LUT4                        : 34
 #      LUT4_D                      : 1
 #      LUT4_L                      : 1
 #      MUXCY                       : 18
-#      MUXF5                       : 5
+#      MUXF5                       : 3
 #      VCC                         : 1
 #      XORCY                       : 20
 # FlipFlops/Latches                : 22
@@ -312,10 +310,10 @@ Device utilization summary:
 
 Selected Device : 3s500efg320-5 
 
- Number of Slices:                       50  out of   4656     1%  
+ Number of Slices:                       45  out of   4656     0%  
  Number of Slice Flip Flops:             22  out of   9312     0%  
- Number of 4 input LUTs:                 89  out of   9312     0%  
- Number of IOs:                           8
+ Number of 4 input LUTs:                 81  out of   9312     0%  
+ Number of IOs:                           7
  Number of bonded IOBs:                   7  out of    232     3%  
  Number of GCLKs:                         1  out of     24     4%  
 
@@ -351,9 +349,9 @@ Timing Summary:
 ---------------
 Speed Grade: -5
 
-   Minimum period: 5.373ns (Maximum Frequency: 186.123MHz)
+   Minimum period: 5.400ns (Maximum Frequency: 185.192MHz)
    Minimum input arrival time before clock: 3.483ns
-   Maximum output required time after clock: 12.952ns
+   Maximum output required time after clock: 12.074ns
    Maximum combinational path delay: No path found
 
 Timing Detail:
@@ -362,10 +360,10 @@ All values displayed in nanoseconds (ns)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 5.373ns (frequency: 186.123MHz)
+  Clock period: 5.400ns (frequency: 185.192MHz)
   Total number of paths / destination ports: 502 / 42
 -------------------------------------------------------------------------
-Delay:               5.373ns (Levels of Logic = 3)
+Delay:               5.400ns (Levels of Logic = 3)
   Source:            show/v_pos_1 (FF)
   Destination:       show/v_pos_9 (FF)
   Source Clock:      clk rising
@@ -376,13 +374,13 @@ Delay:               5.373ns (Levels of Logic = 3)
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      FDE:C->Q              5   0.514   0.607  show/v_pos_1 (show/v_pos_1)
-     LUT4:I1->O            1   0.612   0.387  show/screen_end_cmp_eq000113 (show/screen_end_cmp_eq000113)
-     LUT4:I2->O           11   0.612   0.796  show/screen_end_cmp_eq000134 (show/screen_end_cmp_eq0001)
-     LUT4:I3->O           10   0.612   0.750  show/v_pos_not00021 (show/v_pos_not0002)
+     LUT4:I1->O            1   0.612   0.387  show/screen_end_cmp_eq000111 (show/screen_end_cmp_eq000111)
+     LUT4:I2->O           11   0.612   0.823  show/screen_end_cmp_eq000133 (show/screen_end_cmp_eq0001)
+     LUT4:I2->O           10   0.612   0.750  show/v_pos_not00021 (show/v_pos_not0002)
      FDE:CE                    0.483          show/v_pos_0
     ----------------------------------------
-    Total                      5.373ns (2.833ns logic, 2.540ns route)
-                                       (52.7% logic, 47.3% route)
+    Total                      5.400ns (2.833ns logic, 2.567ns route)
+                                       (52.5% logic, 47.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
@@ -406,41 +404,40 @@ Offset:              3.483ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 390 / 5
+  Total number of paths / destination ports: 166 / 5
 -------------------------------------------------------------------------
-Offset:              12.952ns (Levels of Logic = 9)
+Offset:              12.074ns (Levels of Logic = 8)
   Source:            show/h_pos_8 (FF)
-  Destination:       r_out (PAD)
+  Destination:       b_out (PAD)
   Source Clock:      clk rising
 
-  Data Path: show/h_pos_8 to r_out
+  Data Path: show/h_pos_8 to b_out
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             10   0.514   0.902  show/h_pos_8 (show/h_pos_8)
+     FDE:C->Q              9   0.514   0.849  show/h_pos_8 (show/h_pos_8)
      LUT2:I0->O            2   0.612   0.383  show/h_sync11 (show/N12)
      LUT4:I3->O            6   0.612   0.638  show/draw_active11 (show/N11)
-     LUT2:I1->O            3   0.612   0.603  show/pix_x<2>1 (pix_x<2>)
-     LUT4:I0->O            1   0.612   0.360  win2_cmp_lt0000244_SW0_SW0 (N34)
-     LUT4:I3->O            1   0.612   0.360  win2_cmp_lt0000244_SW0 (N16)
-     LUT4:I3->O            2   0.612   0.410  win2_cmp_lt0000244 (win2_cmp_lt0000244)
-     LUT4:I2->O            1   0.612   0.360  win4_and00001 (win4)
-     LUT4:I3->O            1   0.612   0.357  r_out (r_out_OBUF)
-     OBUF:I->O                 3.169          r_out_OBUF (r_out)
+     LUT2:I1->O            4   0.612   0.651  show/pix_x<2>1 (pix_x<2>)
+     LUT4:I0->O            1   0.612   0.360  win387 (win387)
+     LUT4:I3->O            1   0.612   0.360  win3102_SW0 (N43)
+     LUT4:I3->O            1   0.612   0.509  win3102 (win3102)
+     LUT4:I0->O            1   0.612   0.357  win3108 (b_out_OBUF)
+     OBUF:I->O                 3.169          b_out_OBUF (b_out)
     ----------------------------------------
-    Total                     12.952ns (8.579ns logic, 4.373ns route)
-                                       (66.2% logic, 33.8% route)
+    Total                     12.074ns (7.967ns logic, 4.107ns route)
+                                       (66.0% logic, 34.0% route)
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 4.00 secs
-Total CPU time to Xst completion: 3.41 secs
+Total REAL time to Xst completion: 3.00 secs
+Total CPU time to Xst completion: 3.27 secs
  
 --> 
 
 
-Total memory usage is 519300 kilobytes
+Total memory usage is 518972 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :    1 (   0 filtered)
