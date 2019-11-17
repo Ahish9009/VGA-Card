@@ -1,8 +1,0 @@
-Release 13.4 Drc O.87xd (lin64)
-Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
-
-Tue Nov 12 02:39:21 2019
-
-drc -z screen_design.ncd screen_design.pcf
-
-DRC detected 0 errors and 0 warnings.

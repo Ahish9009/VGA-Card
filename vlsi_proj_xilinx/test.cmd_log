@@ -1,2 +1,0 @@
-vhdtdtfi -lib work /home/shivansh/vlsi-project/vlsi_proj_xilinx/test.v -lang verilog -prj vlsi_proj_xilinx -o test.spl -module test -template /home/shivansh/xilinx/ISE_DS/ISE//data/splveri.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e test.spl /home/shivansh/vlsi-project/vlsi_proj_xilinx/test.sym 

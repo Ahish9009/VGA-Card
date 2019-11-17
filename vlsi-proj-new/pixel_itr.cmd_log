@@ -1,5 +1,0 @@
-xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/vlsi-proj-new/pixel_itr.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/vlsi-proj-new/pixel_itr.syr" 
-ngdbuild -intstyle ise -dd _ngo -nt timestamp -i -p xc3s500e-fg320-4 pixel_itr.ngc pixel_itr.ngd  
-map -intstyle ise -p xc3s500e-fg320-4 -cm area -ir off -pr off -c 100 -o pixel_itr_map.ncd pixel_itr.ngd pixel_itr.pcf 
-par -w -intstyle ise -ol high -t 1 pixel_itr_map.ncd pixel_itr.ncd pixel_itr.pcf 
-trce -intstyle ise -v 3 -s 4 -n 3 -fastpaths -xml pixel_itr.twx pixel_itr.ncd -o pixel_itr.twr pixel_itr.pcf 

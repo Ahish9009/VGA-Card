@@ -1,3 +1,0 @@
-verilog work "../pixel_itr.v"
-verilog work "pixel_itr_tb.v"
-verilog work "/home/shivansh/xilinx/ISE_DS/ISE//verilog/src/glbl.v"
