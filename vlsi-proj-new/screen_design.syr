@@ -5,14 +5,14 @@ Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.04 secs
  
 --> 
 Reading design: screen_design.prj
@@ -107,25 +107,342 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Compilation                              *
 =========================================================================
-Compiling verilog file "../screen_design.v" in library work
-ERROR:HDLCompilers:26 - "../screen_design.v" line 29 unexpected token: ')'
-ERROR:HDLCompilers:26 - "../screen_design.v" line 29 expecting ')', found ';'
-ERROR:HDLCompilers:28 - "../screen_design.v" line 37 'count' has not been declared
-ERROR:HDLCompilers:28 - "../screen_design.v" line 38 'pix_clk' has not been declared
-ERROR:HDLCompilers:28 - "../screen_design.v" line 40 'count' has not been declared
-ERROR:HDLCompilers:28 - "../screen_design.v" line 41 'pix_clk' has not been declared
-ERROR:HDLCompilers:28 - "../screen_design.v" line 42 'count' has not been declared
-ERROR:HDLCompilers:28 - "../screen_design.v" line 45 'pix_clk' has not been declared
-ERROR:HDLCompilers:28 - "../screen_design.v" line 46 'count' has not been declared
-ERROR:HDLCompilers:28 - "../screen_design.v" line 46 'count' has not been declared
+Compiling verilog file "../for test purpose/screen_design_optimized.v" in library work
+Module <pixel_itr> compiled
 Module <screen_design> compiled
-Analysis of file <"screen_design.prj"> failed.
+No errors in compilation
+Analysis of file <"screen_design.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <screen_design> in library <work>.
+
+Analyzing hierarchy for module <pixel_itr> in library <work> with parameters.
+	h_draw_min = "00000000000000000000000010100000"
+	h_max = "00000000000000000000001100100000"
+	h_sync_end = "00000000000000000000000001110000"
+	h_sync_strt = "00000000000000000000000000010000"
+	v_draw_max = "00000000000000000000000111011111"
+	v_max = "00000000000000000000001000001100"
+	v_sync_end = "00000000000000000000000111101100"
+	v_sync_strt = "00000000000000000000000111101010"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <screen_design>.
+Module <screen_design> is correct for synthesis.
+ 
+Analyzing module <pixel_itr> in library <work>.
+	h_draw_min = 32'sb00000000000000000000000010100000
+	h_max = 32'sb00000000000000000000001100100000
+	h_sync_end = 32'sb00000000000000000000000001110000
+	h_sync_strt = 32'sb00000000000000000000000000010000
+	v_draw_max = 32'sb00000000000000000000000111011111
+	v_max = 32'sb00000000000000000000001000001100
+	v_sync_end = 32'sb00000000000000000000000111101100
+	v_sync_strt = 32'sb00000000000000000000000111101010
+Module <pixel_itr> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <pixel_itr>.
+    Related source file is "../for test purpose/screen_design_optimized.v".
+    Found 10-bit comparator greater for signal <draw_active$cmp_gt0000> created at line 49.
+    Found 10-bit comparator less for signal <draw_active$cmp_lt0000> created at line 49.
+    Found 10-bit register for signal <h_pos>.
+    Found 10-bit adder for signal <h_pos$addsub0000> created at line 66.
+    Found 11-bit comparator less for signal <h_pos$cmp_lt0000> created at line 65.
+    Found 10-bit comparator greatequal for signal <h_sync$cmp_ge0000> created at line 38.
+    Found 10-bit comparator less for signal <h_sync$cmp_lt0000> created at line 38.
+    Found 10-bit comparator greatequal for signal <pix_x$cmp_ge0000> created at line 44.
+    Found 10-bit comparator lessequal for signal <pix_y$cmp_le0000> created at line 45.
+    Found 10-bit register for signal <v_pos>.
+    Found 10-bit adder for signal <v_pos$addsub0000> created at line 70.
+    Found 10-bit comparator greatequal for signal <v_sync$cmp_ge0000> created at line 39.
+    Found 10-bit comparator less for signal <v_sync$cmp_lt0000> created at line 39.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+Unit <pixel_itr> synthesized.
+
+
+Synthesizing Unit <screen_design>.
+    Related source file is "../for test purpose/screen_design_optimized.v".
+WARNING:Xst:1306 - Output <temp> is never assigned.
+    Found 1-bit register for signal <count>.
+    Found 1-bit register for signal <pix_clk>.
+    Found 10-bit comparator greater for signal <win1$cmp_gt0000> created at line 141.
+    Found 10-bit comparator greater for signal <win1$cmp_gt0001> created at line 141.
+    Found 10-bit comparator less for signal <win1$cmp_lt0000> created at line 141.
+    Found 10-bit comparator less for signal <win1$cmp_lt0001> created at line 141.
+    Found 10-bit comparator greater for signal <win2$cmp_gt0000> created at line 142.
+    Found 10-bit comparator less for signal <win2$cmp_lt0000> created at line 142.
+    Found 10-bit comparator greater for signal <win3$cmp_gt0000> created at line 143.
+    Found 10-bit comparator less for signal <win3$cmp_lt0000> created at line 143.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred   8 Comparator(s).
+Unit <screen_design> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 2
+# Registers                                            : 4
+ 1-bit register                                        : 2
+ 10-bit register                                       : 2
+# Comparators                                          : 17
+ 10-bit comparator greatequal                          : 3
+ 10-bit comparator greater                             : 5
+ 10-bit comparator less                                : 7
+ 10-bit comparator lessequal                           : 1
+ 11-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 2
+ 10-bit adder                                          : 2
+# Registers                                            : 22
+ Flip-Flops                                            : 22
+# Comparators                                          : 17
+ 10-bit comparator greatequal                          : 3
+ 10-bit comparator greater                             : 5
+ 10-bit comparator less                                : 7
+ 10-bit comparator lessequal                           : 1
+ 11-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <screen_design> ...
+
+Optimizing unit <pixel_itr> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block screen_design, actual ratio is 1.
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 22
+ Flip-Flops                                            : 22
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : screen_design.ngr
+Top Level Output File Name         : screen_design
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 8
+
+Cell Usage :
+# BELS                             : 134
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 18
+#      LUT2                        : 16
+#      LUT2_L                      : 1
+#      LUT3                        : 6
+#      LUT3_L                      : 1
+#      LUT4                        : 43
+#      LUT4_D                      : 1
+#      MUXCY                       : 18
+#      MUXF5                       : 5
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 22
+#      FDE                         : 20
+#      FDR                         : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      IBUF                        : 1
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                       50  out of   4656     1%  
+ Number of Slice Flip Flops:             22  out of   9312     0%  
+ Number of 4 input LUTs:                 89  out of   9312     0%  
+ Number of IOs:                           8
+ Number of bonded IOBs:                   7  out of    232     3%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 22    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.144ns (Maximum Frequency: 162.760MHz)
+   Minimum input arrival time before clock: 3.981ns
+   Maximum output required time after clock: 14.631ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.144ns (frequency: 162.760MHz)
+  Total number of paths / destination ports: 502 / 42
+-------------------------------------------------------------------------
+Delay:               6.144ns (Levels of Logic = 3)
+  Source:            show/h_pos_6 (FF)
+  Destination:       show/v_pos_9 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: show/h_pos_6 to show/v_pos_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              8   0.591   0.932  show/h_pos_6 (show/h_pos_6)
+     LUT2_L:I0->LO         1   0.704   0.104  show/v_pos_mux0000<0>21_SW0 (N61)
+     LUT4:I3->O           11   0.704   0.968  show/v_pos_mux0000<0>21 (show/N13)
+     LUT4:I2->O           10   0.704   0.882  show/v_pos_not00021 (show/v_pos_not0002)
+     FDE:CE                    0.555          show/v_pos_0
+    ----------------------------------------
+    Total                      6.144ns (3.258ns logic, 2.886ns route)
+                                       (53.0% logic, 47.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 20 / 20
+-------------------------------------------------------------------------
+Offset:              3.981ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       show/v_pos_9 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to show/v_pos_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.622  rst_IBUF (rst_IBUF)
+     LUT2:I0->O           10   0.704   0.882  show/h_pos_not00021 (show/h_pos_not0002)
+     FDE:CE                    0.555          show/h_pos_0
+    ----------------------------------------
+    Total                      3.981ns (2.477ns logic, 1.504ns route)
+                                       (62.2% logic, 37.8% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 390 / 5
+-------------------------------------------------------------------------
+Offset:              14.631ns (Levels of Logic = 9)
+  Source:            show/h_pos_8 (FF)
+  Destination:       r_out (PAD)
+  Source Clock:      clk rising
+
+  Data Path: show/h_pos_8 to r_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             10   0.591   1.057  show/h_pos_8 (show/h_pos_8)
+     LUT2:I0->O            2   0.704   0.451  show/h_sync11 (show/N12)
+     LUT4:I3->O            6   0.704   0.748  show/draw_active11 (show/N11)
+     LUT2:I1->O            3   0.704   0.706  show/pix_x<2>1 (pix_x<2>)
+     LUT4:I0->O            1   0.704   0.424  win2_cmp_lt0000244_SW0_SW0 (N34)
+     LUT4:I3->O            1   0.704   0.424  win2_cmp_lt0000244_SW0 (N16)
+     LUT4:I3->O            2   0.704   0.482  win2_cmp_lt0000244 (win2_cmp_lt0000244)
+     LUT4:I2->O            1   0.704   0.424  win4_and00001 (win4)
+     LUT4:I3->O            1   0.704   0.420  r_out (r_out_OBUF)
+     OBUF:I->O                 3.272          r_out_OBUF (r_out)
+    ----------------------------------------
+    Total                     14.631ns (9.495ns logic, 5.136ns route)
+                                       (64.9% logic, 35.1% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 4.00 secs
+Total CPU time to Xst completion: 3.57 secs
+ 
 --> 
 
 
-Total memory usage is 495316 kilobytes
+Total memory usage is 519092 kilobytes
 
-Number of errors   :   10 (   0 filtered)
-Number of warnings :    0 (   0 filtered)
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
 Number of infos    :    0 (   0 filtered)
 

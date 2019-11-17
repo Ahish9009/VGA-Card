@@ -1,5 +1,5 @@
 ISim log file
-Running: /home/ahish/Desktop/VLSI-Project/vlsi-project/vlsi-proj-new/tbscreen_ahish_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/ahish/Desktop/VLSI-Project/vlsi-project/vlsi-proj-new/tbscreen_ahish_isim_beh.wdb 
+Running: /home/shivansh/vlsi-project/vlsi-proj-new/screen_design_tb_isim_beh.exe -intstyle ise -gui -tclbatch isim.cmd -wdb /home/shivansh/vlsi-project/vlsi-proj-new/screen_design_tb_isim_beh.wdb 
 ISim O.87xd (signature 0x8ddf5b5d)
 WARNING: A WEBPACK license was found.
 WARNING: Please use Xilinx License Configuration Manager to check out a full ISim license.
@@ -11,3 +11,4 @@ Time resolution is 1 ps
 # run 10000us
 Simulator is doing circuit initialization process.
 Finished circuit initialization process.
+# exit 0

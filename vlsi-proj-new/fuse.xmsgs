@@ -5,13 +5,10 @@
      behavior or data corruption.  It is strongly advised that
      users do not edit the contents of this file. -->
 <messages>
-<msg type="warning" file="HDLCompiler" num="751" delta="unknown" >"/home/ahish/Desktop/VLSI-Project/vlsi-project/vlsi-proj-new/../screen_design.v" Line 75: Redeclaration of ansi port <arg fmt="%s" index="1">win1</arg> is not allowed
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/shivansh/vlsi-project/vlsi-proj-new/../final/screen_design_tb.v" Line 39: Port <arg fmt="%s" index="1">temp</arg> is not connected to this instance
 </msg>
 
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ahish/Desktop/VLSI-Project/vlsi-project/vlsi-proj-new/tbscreen_ahish.v" Line 40: Port <arg fmt="%s" index="1">win1</arg> is not connected to this instance
-</msg>
-
-<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/ahish/Desktop/VLSI-Project/vlsi-project/vlsi-proj-new/../screen_design.v" Line 62: Port <arg fmt="%s" index="1">draw_active</arg> is not connected to this instance
+<msg type="warning" file="HDLCompiler" num="1016" delta="unknown" >"/home/shivansh/vlsi-project/vlsi-proj-new/../screen_design_optimized.v" Line 125: Port <arg fmt="%s" index="1">draw_active</arg> is not connected to this instance
 </msg>
 
 </messages>

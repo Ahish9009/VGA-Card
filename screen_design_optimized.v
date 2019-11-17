@@ -108,7 +108,8 @@ module screen_design(
 	output v_sync,
 	output r_out,
 	output g_out,
-	output b_out
+	output b_out,
+	output temp
 );
 
 //---------------GENERATING PIXEL CLOCK----------------------
@@ -118,8 +119,8 @@ reg count = 0, pix_clk = 0;
 //-----------------------------------------------------------
 
 //-------------GETTING CURRENT PIXEL COORDINATES-------------
-wire [10:0] pix_x;
-wire [10:0] pix_y;
+wire [9:0] pix_x;
+wire [9:0] pix_y;
 
 pixel_itr show(
 	.clk(clk),
@@ -143,6 +144,7 @@ assign win4 = (( pix_x > 240) & (pix_y > 0) & (pix_y < 599) & (pix_x < 1000)) ? 
 assign r_out = win4;
 assign g_out = 0;
 assign b_out = 0;
+assign temp = win4;
 
 //-----------------------------------------------------------
 

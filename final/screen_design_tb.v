@@ -1,27 +1,5 @@
 `timescale 1ns / 1ps
 
-////////////////////////////////////////////////////////////////////////////////
-// Company: 
-// Engineer:
-//
-// Create Date:   14:42:52 11/06/2019
-// Design Name:   screen_design
-// Module Name:   /home/shivansh/vlsi-project/vlsi-proj-new/screen_design_tb.v
-// Project Name:  vlsi-proj-new
-// Target Device:  
-// Tool versions:  
-// Description: 
-//
-// Verilog Test Fixture created by ISE for module: screen_design
-//
-// Dependencies:
-// 
-// Revision:
-// Revision 0.01 - File Created
-// Additional Comments:
-// 
-////////////////////////////////////////////////////////////////////////////////
-
 module screen_design_tb;
 
 	// Inputs

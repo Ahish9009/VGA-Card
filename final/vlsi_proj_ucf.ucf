@@ -1,4 +1,4 @@
-net "clk" loc = "C9";
+net "clk" loc = "B8";
 
 //NET "r_out" LOC = "H14" ;
 //NET "g_out" LOC = "H15" ;
@@ -17,9 +17,7 @@ net "g_out" loc = "P8";
 net "g_out" loc = "N8";
 net "b_out" loc = "U4";
 net "b_out" loc = "U5";
-net "r_out" loc = "R4";
 
 //net "clkout" loc = "P15";
 //NET "clk" CLOCK_DEDICATED_ROUTE = FALSE;
 //net "clk" loc = "R17";
-//net "temp" loc = "J14";

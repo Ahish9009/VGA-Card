@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2019-11-11T22:06:38</DateModified>
-  <ModuleName>pixel_itr</ModuleName>
+  <DateModified>2019-11-17T15:39:03</DateModified>
+  <ModuleName>screen_design</ModuleName>
   <SummaryTimeStamp>Unknown</SummaryTimeStamp>
   <SavedFilePath>/home/shivansh/vlsi-project/vlsi-proj-new/iseconfig/screen_design.xreport</SavedFilePath>
   <ImplementationReportsDirectory>/home/shivansh/vlsi-project/vlsi-proj-new/</ImplementationReportsDirectory>

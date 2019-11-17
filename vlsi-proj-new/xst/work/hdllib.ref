@@ -1,1 +1,2 @@
-MO pixel_itr NULL ../pixel_itr.v vlg0C/pixel__itr.bin 1573031107
+MO pixel_itr NULL "../for test purpose/screen_design_optimized.v" vlg0C/pixel__itr.bin 1573986104
+MO screen_design NULL "../for test purpose/screen_design_optimized.v" vlg29/screen__design.bin 1573986104

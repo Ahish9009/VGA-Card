@@ -1,0 +1,3 @@
+verilog work "../screen_design_optimized.v"
+verilog work "../final/screen_design_tb.v"
+verilog work "/home/shivansh/xilinx/ISE_DS/ISE//verilog/src/glbl.v"
