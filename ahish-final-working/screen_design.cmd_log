@@ -9,3 +9,143 @@ map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_
 par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
 trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
 bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 
+xst -intstyle ise -ifn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.xst" -ofn "/home/ahish/Desktop/VLSI-Project/vlsi-project/ahish-final-working/screen_design.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc vlsi_proj_ucf.ucf -p xc3s500e-fg320-5 screen_design.ngc screen_design.ngd  
+map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o screen_design_map.ncd screen_design.ngd screen_design.pcf 
+par -w -intstyle ise -ol high -t 1 screen_design_map.ncd screen_design.ncd screen_design.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr screen_design.pcf -ucf vlsi_proj_ucf.ucf 
+bitgen -intstyle ise -f screen_design.ut screen_design.ncd 

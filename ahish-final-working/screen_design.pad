@@ -1,7 +1,7 @@
 Release 13.4 - par O.87xd (lin64)
 Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
-Sun Nov 17 17:17:28 2019
+Sun Nov 17 18:01:09 2019
 
 
 # NOTE: This file is designed to be imported into a spreadsheet program
@@ -216,7 +216,7 @@ L18||DIFFM|IO_L10P_1|UNUSED||1|||||||||
 M1||IBUF|IP|UNUSED||3|||||||||
 M2|||VCCAUX||||||||2.5||||
 M3||DIFFS|IO_L18N_3|UNUSED||3|||||||||
-M4|rst|IBUF|IO_L18P_3|INPUT|LVCMOS25*|3||||NONE||UNLOCATED|NO|NONE|
+M4||DIFFM|IO_L18P_3|UNUSED||3|||||||||
 M5||DIFFM|IO_L19P_3|UNUSED||3|||||||||
 M6||DIFFS|IO_L19N_3|UNUSED||3|||||||||
 M7|||GND||||||||||||
@@ -231,7 +231,7 @@ M15||DIFFM|IO_L07P_1|UNUSED||1|||||||||
 M16||DIFFS|IO_L07N_1|UNUSED||1|||||||||
 M17|||VCCAUX||||||||2.5||||
 M18||DIFFS|IO_L08N_1|UNUSED||1|||||||||
-N1||IBUF|IP|UNUSED||3|||||||||
+N1|rst|IBUF|IP|INPUT|LVCMOS25*|3||||NONE||UNLOCATED|NO|NONE|
 N2||IBUF|IP|UNUSED||3|||||||||
 N3|||VCCO_3|||3|||||2.50||||
 N4||DIFFM|IO_L20P_3|UNUSED||3|||||||||
