@@ -1,0 +1,1524 @@
+Release 13.4 - xst O.87xd (lin64)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> 
+Parameter TMPDIR set to xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Parameter xsthdpdir set to xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.04 secs
+ 
+--> 
+Reading design: screen_design.prj
+
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Compilation
+  3) Design Hierarchy Analysis
+  4) HDL Analysis
+  5) HDL Synthesis
+     5.1) HDL Synthesis Report
+  6) Advanced HDL Synthesis
+     6.1) Advanced HDL Synthesis Report
+  7) Low Level Synthesis
+  8) Partition Report
+  9) Final Report
+	9.1) Device utilization summary
+	9.2) Partition Resource Summary
+	9.3) TIMING REPORT
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "screen_design.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : NO
+
+---- Target Parameters
+Output File Name                   : "screen_design"
+Output Format                      : NGC
+Target Device                      : xc3s500e-4-fg320
+
+---- Source Options
+Top Module Name                    : screen_design
+Automatic FSM Extraction           : YES
+FSM Encoding Algorithm             : Auto
+Safe Implementation                : No
+FSM Style                          : LUT
+RAM Extraction                     : Yes
+RAM Style                          : Auto
+ROM Extraction                     : Yes
+Mux Style                          : Auto
+Decoder Extraction                 : YES
+Priority Encoder Extraction        : Yes
+Shift Register Extraction          : YES
+Logical Shifter Extraction         : YES
+XOR Collapsing                     : YES
+ROM Style                          : Auto
+Mux Extraction                     : Yes
+Resource Sharing                   : YES
+Asynchronous To Synchronous        : NO
+Multiplier Style                   : Auto
+Automatic Register Balancing       : No
+
+---- Target Options
+Add IO Buffers                     : YES
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 24
+Register Duplication               : YES
+Slice Packing                      : YES
+Optimize Instantiated Primitives   : NO
+Use Clock Enable                   : Yes
+Use Synchronous Set                : Yes
+Use Synchronous Reset              : Yes
+Pack IO Registers into IOBs        : Auto
+Equivalent register Removal        : YES
+
+---- General Options
+Optimization Goal                  : Speed
+Optimization Effort                : 1
+Keep Hierarchy                     : No
+Netlist Hierarchy                  : As_Optimized
+RTL Output                         : Yes
+Global Optimization                : AllClockNets
+Read Cores                         : YES
+Write Timing Constraints           : NO
+Cross Clock Analysis               : NO
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : Maintain
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+Verilog 2001                       : YES
+Auto BRAM Packing                  : NO
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling verilog file "screen_design_optimized.v" in library work
+Module <pixel_itr> compiled
+Module <screen_design> compiled
+No errors in compilation
+Analysis of file <"screen_design.prj"> succeeded.
+ 
+
+=========================================================================
+*                     Design Hierarchy Analysis                         *
+=========================================================================
+Analyzing hierarchy for module <screen_design> in library <work>.
+
+Analyzing hierarchy for module <pixel_itr> in library <work> with parameters.
+	h_draw_min = "00000000000000000000000010100000"
+	h_max = "00000000000000000000001100100000"
+	h_sync_end = "00000000000000000000000001110000"
+	h_sync_strt = "00000000000000000000000000010000"
+	v_draw_max = "00000000000000000000000111011111"
+	v_max = "00000000000000000000001000001100"
+	v_sync_end = "00000000000000000000000111101100"
+	v_sync_strt = "00000000000000000000000111101010"
+
+
+=========================================================================
+*                            HDL Analysis                               *
+=========================================================================
+Analyzing top module <screen_design>.
+Module <screen_design> is correct for synthesis.
+ 
+Analyzing module <pixel_itr> in library <work>.
+	h_draw_min = 32'sb00000000000000000000000010100000
+	h_max = 32'sb00000000000000000000001100100000
+	h_sync_end = 32'sb00000000000000000000000001110000
+	h_sync_strt = 32'sb00000000000000000000000000010000
+	v_draw_max = 32'sb00000000000000000000000111011111
+	v_max = 32'sb00000000000000000000001000001100
+	v_sync_end = 32'sb00000000000000000000000111101100
+	v_sync_strt = 32'sb00000000000000000000000111101010
+Module <pixel_itr> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <pixel_itr>.
+    Related source file is "screen_design_optimized.v".
+    Found 10-bit comparator greater for signal <draw_active$cmp_gt0000> created at line 49.
+    Found 10-bit comparator less for signal <draw_active$cmp_lt0000> created at line 49.
+    Found 10-bit register for signal <h_pos>.
+    Found 10-bit adder for signal <h_pos$addsub0000> created at line 66.
+    Found 11-bit comparator less for signal <h_pos$cmp_lt0000> created at line 65.
+    Found 10-bit comparator greatequal for signal <h_sync$cmp_ge0000> created at line 38.
+    Found 10-bit comparator less for signal <h_sync$cmp_lt0000> created at line 38.
+    Found 10-bit subtractor for signal <pix_x$addsub0000> created at line 44.
+    Found 10-bit comparator greatequal for signal <pix_x$cmp_ge0000> created at line 44.
+    Found 10-bit comparator lessequal for signal <pix_y$cmp_le0000> created at line 45.
+    Found 10-bit register for signal <v_pos>.
+    Found 10-bit adder for signal <v_pos$addsub0000> created at line 70.
+    Found 10-bit comparator greatequal for signal <v_sync$cmp_ge0000> created at line 39.
+    Found 10-bit comparator less for signal <v_sync$cmp_lt0000> created at line 39.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+Unit <pixel_itr> synthesized.
+
+
+Synthesizing Unit <screen_design>.
+    Related source file is "screen_design_optimized.v".
+    Found 10-bit comparator greatequal for signal <b_out$cmp_ge0000> created at line 150.
+    Found 10-bit comparator greatequal for signal <b_out$cmp_ge0001> created at line 150.
+    Found 10-bit comparator greatequal for signal <b_out$cmp_ge0002> created at line 150.
+    Found 10-bit comparator greatequal for signal <b_out$cmp_ge0003> created at line 150.
+    Found 10-bit comparator lessequal for signal <b_out$cmp_le0000> created at line 150.
+    Found 10-bit comparator lessequal for signal <b_out$cmp_le0001> created at line 150.
+    Found 10-bit comparator lessequal for signal <b_out$cmp_le0002> created at line 150.
+    Found 10-bit comparator lessequal for signal <b_out$cmp_le0003> created at line 150.
+    Found 10-bit comparator lessequal for signal <b_out$cmp_le0004> created at line 150.
+    Found 1-bit register for signal <count>.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0000> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0001> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0002> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0003> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0004> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0005> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0006> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0007> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0008> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0009> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0010> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0011> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0012> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0013> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0014> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0015> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0016> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0017> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0018> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0019> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0020> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0021> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0022> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0023> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0024> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0025> created at line 144.
+    Found 10-bit comparator greatequal for signal <g_out$cmp_ge0026> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0000> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0001> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0002> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0003> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0004> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0005> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0006> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0007> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0008> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0009> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0010> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0011> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0012> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0013> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0014> created at line 144.
+    Found 10-bit comparator lessequal for signal <g_out$cmp_le0015> created at line 144.
+    Found 1-bit register for signal <pix_clk>.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0000> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0001> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0002> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0003> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0004> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0005> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0006> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0007> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0008> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0009> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0010> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0011> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0012> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0013> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0014> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0015> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0016> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0017> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0018> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0019> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0020> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0021> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0022> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0023> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0024> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0025> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0026> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0027> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0028> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0029> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0030> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0031> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0032> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0033> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0034> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0035> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0036> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0037> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0038> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0039> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0040> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0041> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0042> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0043> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0044> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0045> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0046> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0047> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0048> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0049> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0050> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0051> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0052> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0053> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0054> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0055> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0056> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0057> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0058> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0059> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0060> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0061> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0062> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0063> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0064> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0065> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0066> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0067> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0068> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0069> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0070> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0071> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0072> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0073> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0074> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0075> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0076> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0077> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0078> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0079> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0080> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0081> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0082> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0083> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0084> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0085> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0086> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0087> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0088> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0089> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0090> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0091> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0092> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0093> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0094> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0095> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0096> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0097> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0098> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0099> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0100> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0101> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0102> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0103> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0104> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0105> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0106> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0107> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0108> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0109> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0110> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0111> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0112> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0113> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0114> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0115> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0116> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0117> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0118> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0119> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0120> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0121> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0122> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0123> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0124> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0125> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0126> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0127> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0128> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0129> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0130> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0131> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0132> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0133> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0134> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0135> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0136> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0137> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0138> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0139> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0140> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0141> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0142> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0143> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0144> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0145> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0146> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0147> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0148> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0149> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0150> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0151> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0152> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0153> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0154> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0155> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0156> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0157> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0158> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0159> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0160> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0161> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0162> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0163> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0164> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0165> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0166> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0167> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0168> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0169> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0170> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0171> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0172> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0173> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0174> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0175> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0176> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0177> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0178> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0179> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0180> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0181> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0182> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0183> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0184> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0185> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0186> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0187> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0188> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0189> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0190> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0191> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0192> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0193> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0194> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0195> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0196> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0197> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0198> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0199> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0200> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0201> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0202> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0203> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0204> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0205> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0206> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0207> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0208> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0209> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0210> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0211> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0212> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0213> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0214> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0215> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0216> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0217> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0218> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0219> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0220> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0221> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0222> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0223> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0224> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0225> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0226> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0227> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0228> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0229> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0230> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0231> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0232> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0233> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0234> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0235> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0236> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0237> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0238> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0239> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0240> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0241> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0242> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0243> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0244> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0245> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0246> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0247> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0248> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0249> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0250> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0251> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0252> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0253> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0254> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0255> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0256> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0257> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0258> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0259> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0260> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0261> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0262> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0263> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0264> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0265> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0266> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0267> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0268> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0269> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0270> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0271> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0272> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0273> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0274> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0275> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0276> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0277> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0278> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0279> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0280> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0281> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0282> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0283> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0284> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0285> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0286> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0287> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0288> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0289> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0290> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0291> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0292> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0293> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0294> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0295> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0296> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0297> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0298> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0299> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0300> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0301> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0302> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0303> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0304> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0305> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0306> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0307> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0308> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0309> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0310> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0311> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0312> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0313> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0314> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0315> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0316> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0317> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0318> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0319> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0320> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0321> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0322> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0323> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0324> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0325> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0326> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0327> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0328> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0329> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0330> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0331> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0332> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0333> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0334> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0335> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0336> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0337> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0338> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0339> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0340> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0341> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0342> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0343> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0344> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0345> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0346> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0347> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0348> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0349> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0350> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0351> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0352> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0353> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0354> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0355> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0356> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0357> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0358> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0359> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0360> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0361> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0362> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0363> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0364> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0365> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0366> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0367> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0368> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0369> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0370> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0371> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0372> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0373> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0374> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0375> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0376> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0377> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0378> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0379> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0380> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0381> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0382> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0383> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0384> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0385> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0386> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0387> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0388> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0389> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0390> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0391> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0392> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0393> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0394> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0395> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0396> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0397> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0398> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0399> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0400> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0401> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0402> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0403> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0404> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0405> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0406> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0407> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0408> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0409> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0410> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0411> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0412> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0413> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0414> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0415> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0416> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0417> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0418> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0419> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0420> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0421> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0422> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0423> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0424> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0425> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0426> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0427> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0428> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0429> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0430> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0431> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0432> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0433> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0434> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0435> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0436> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0437> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0438> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0439> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0440> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0441> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0442> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0443> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0444> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0445> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0446> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0447> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0448> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0449> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0450> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0451> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0452> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0453> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0454> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0455> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0456> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0457> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0458> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0459> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0460> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0461> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0462> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0463> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0464> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0465> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0466> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0467> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0468> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0469> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0470> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0471> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0472> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0473> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0474> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0475> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0476> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0477> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0478> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0479> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0480> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0481> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0482> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0483> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0484> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0485> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0486> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0487> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0488> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0489> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0490> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0491> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0492> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0493> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0494> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0495> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0496> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0497> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0498> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0499> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0500> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0501> created at line 138.
+    Found 10-bit comparator greatequal for signal <r_out$cmp_ge0502> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0000> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0001> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0002> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0003> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0004> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0005> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0006> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0007> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0008> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0009> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0010> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0011> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0012> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0013> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0014> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0015> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0016> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0017> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0018> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0019> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0020> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0021> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0022> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0023> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0024> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0025> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0026> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0027> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0028> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0029> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0030> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0031> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0032> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0033> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0034> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0035> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0036> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0037> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0038> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0039> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0040> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0041> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0042> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0043> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0044> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0045> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0046> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0047> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0048> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0049> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0050> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0051> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0052> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0053> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0054> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0055> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0056> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0057> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0058> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0059> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0060> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0061> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0062> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0063> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0064> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0065> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0066> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0067> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0068> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0069> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0070> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0071> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0072> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0073> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0074> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0075> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0076> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0077> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0078> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0079> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0080> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0081> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0082> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0083> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0084> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0085> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0086> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0087> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0088> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0089> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0090> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0091> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0092> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0093> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0094> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0095> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0096> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0097> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0098> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0099> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0100> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0101> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0102> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0103> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0104> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0105> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0106> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0107> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0108> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0109> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0110> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0111> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0112> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0113> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0114> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0115> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0116> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0117> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0118> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0119> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0120> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0121> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0122> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0123> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0124> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0125> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0126> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0127> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0128> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0129> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0130> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0131> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0132> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0133> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0134> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0135> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0136> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0137> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0138> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0139> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0140> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0141> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0142> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0143> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0144> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0145> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0146> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0147> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0148> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0149> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0150> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0151> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0152> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0153> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0154> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0155> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0156> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0157> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0158> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0159> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0160> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0161> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0162> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0163> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0164> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0165> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0166> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0167> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0168> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0169> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0170> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0171> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0172> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0173> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0174> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0175> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0176> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0177> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0178> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0179> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0180> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0181> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0182> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0183> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0184> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0185> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0186> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0187> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0188> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0189> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0190> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0191> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0192> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0193> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0194> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0195> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0196> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0197> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0198> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0199> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0200> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0201> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0202> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0203> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0204> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0205> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0206> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0207> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0208> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0209> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0210> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0211> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0212> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0213> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0214> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0215> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0216> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0217> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0218> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0219> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0220> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0221> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0222> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0223> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0224> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0225> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0226> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0227> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0228> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0229> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0230> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0231> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0232> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0233> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0234> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0235> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0236> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0237> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0238> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0239> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0240> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0241> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0242> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0243> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0244> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0245> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0246> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0247> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0248> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0249> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0250> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0251> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0252> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0253> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0254> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0255> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0256> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0257> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0258> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0259> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0260> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0261> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0262> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0263> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0264> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0265> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0266> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0267> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0268> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0269> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0270> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0271> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0272> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0273> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0274> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0275> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0276> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0277> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0278> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0279> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0280> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0281> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0282> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0283> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0284> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0285> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0286> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0287> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0288> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0289> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0290> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0291> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0292> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0293> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0294> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0295> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0296> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0297> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0298> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0299> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0300> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0301> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0302> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0303> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0304> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0305> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0306> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0307> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0308> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0309> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0310> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0311> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0312> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0313> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0314> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0315> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0316> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0317> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0318> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0319> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0320> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0321> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0322> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0323> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0324> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0325> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0326> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0327> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0328> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0329> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0330> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0331> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0332> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0333> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0334> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0335> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0336> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0337> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0338> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0339> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0340> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0341> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0342> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0343> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0344> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0345> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0346> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0347> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0348> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0349> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0350> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0351> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0352> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0353> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0354> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0355> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0356> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0357> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0358> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0359> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0360> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0361> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0362> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0363> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0364> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0365> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0366> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0367> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0368> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0369> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0370> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0371> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0372> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0373> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0374> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0375> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0376> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0377> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0378> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0379> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0380> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0381> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0382> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0383> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0384> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0385> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0386> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0387> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0388> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0389> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0390> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0391> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0392> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0393> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0394> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0395> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0396> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0397> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0398> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0399> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0400> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0401> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0402> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0403> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0404> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0405> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0406> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0407> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0408> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0409> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0410> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0411> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0412> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0413> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0414> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0415> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0416> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0417> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0418> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0419> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0420> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0421> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0422> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0423> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0424> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0425> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0426> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0427> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0428> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0429> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0430> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0431> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0432> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0433> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0434> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0435> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0436> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0437> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0438> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0439> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0440> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0441> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0442> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0443> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0444> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0445> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0446> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0447> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0448> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0449> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0450> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0451> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0452> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0453> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0454> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0455> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0456> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0457> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0458> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0459> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0460> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0461> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0462> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0463> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0464> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0465> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0466> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0467> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0468> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0469> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0470> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0471> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0472> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0473> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0474> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0475> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0476> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0477> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0478> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0479> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0480> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0481> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0482> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0483> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0484> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0485> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0486> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0487> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0488> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0489> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0490> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0491> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0492> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0493> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0494> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0495> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0496> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0497> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0498> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0499> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0500> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0501> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0502> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0503> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0504> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0505> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0506> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0507> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0508> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0509> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0510> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0511> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0512> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0513> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0514> created at line 138.
+    Found 10-bit comparator lessequal for signal <r_out$cmp_le0515> created at line 138.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred 1071 Comparator(s).
+Unit <screen_design> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 1
+# Registers                                            : 4
+ 1-bit register                                        : 2
+ 10-bit register                                       : 2
+# Comparators                                          : 1080
+ 10-bit comparator greatequal                          : 537
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 3
+ 10-bit comparator lessequal                           : 538
+ 11-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 1
+# Registers                                            : 22
+ Flip-Flops                                            : 22
+# Comparators                                          : 1080
+ 10-bit comparator greatequal                          : 537
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 3
+ 10-bit comparator lessequal                           : 538
+ 11-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <screen_design> ...
+
+Optimizing unit <pixel_itr> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block screen_design, actual ratio is 27.
+FlipFlop show/v_pos_9 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 23
+ Flip-Flops                                            : 23
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : screen_design.ngr
+Top Level Output File Name         : screen_design
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 7
+
+Cell Usage :
+# BELS                             : 2218
+#      GND                         : 1
+#      INV                         : 7
+#      LUT1                        : 18
+#      LUT2                        : 78
+#      LUT2_L                      : 1
+#      LUT3                        : 277
+#      LUT4                        : 1525
+#      LUT4_D                      : 2
+#      MUXCY                       : 18
+#      MUXF5                       : 270
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 23
+#      FDE                         : 21
+#      FDR                         : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      IBUF                        : 1
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-4 
+
+ Number of Slices:                     1056  out of   4656    22%  
+ Number of Slice Flip Flops:             23  out of   9312     0%  
+ Number of 4 input LUTs:               1908  out of   9312    20%  
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of    232     3%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 23    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -4
+
+   Minimum period: 6.325ns (Maximum Frequency: 158.103MHz)
+   Minimum input arrival time before clock: 4.032ns
+   Maximum output required time after clock: 28.527ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 6.325ns (frequency: 158.103MHz)
+  Total number of paths / destination ports: 544 / 44
+-------------------------------------------------------------------------
+Delay:               6.325ns (Levels of Logic = 3)
+  Source:            show/h_pos_7 (FF)
+  Destination:       show/v_pos_9 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: show/h_pos_7 to show/v_pos_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             13   0.591   1.062  show/h_pos_7 (show/h_pos_7)
+     LUT2_L:I1->LO         1   0.704   0.104  show/v_pos_mux0000<0>21_SW0 (N4)
+     LUT4:I3->O           11   0.704   0.968  show/v_pos_mux0000<0>21 (show/N16)
+     LUT4:I2->O           11   0.704   0.933  show/v_pos_not00021 (show/v_pos_not0002)
+     FDE:CE                    0.555          show/v_pos_0
+    ----------------------------------------
+    Total                      6.325ns (3.258ns logic, 3.067ns route)
+                                       (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 21 / 21
+-------------------------------------------------------------------------
+Offset:              4.032ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       show/v_pos_9 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to show/v_pos_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.218   0.622  rst_IBUF (rst_IBUF)
+     LUT4:I0->O           11   0.704   0.933  show/v_pos_not00021 (show/v_pos_not0002)
+     FDE:CE                    0.555          show/v_pos_0
+    ----------------------------------------
+    Total                      4.032ns (2.477ns logic, 1.555ns route)
+                                       (61.4% logic, 38.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 85352 / 5
+-------------------------------------------------------------------------
+Offset:              28.527ns (Levels of Logic = 20)
+  Source:            show/h_pos_6 (FF)
+  Destination:       g_out (PAD)
+  Source Clock:      clk rising
+
+  Data Path: show/h_pos_6 to g_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q              7   0.591   0.883  show/h_pos_6 (show/h_pos_6)
+     LUT2:I0->O            7   0.704   0.743  show/pix_x<8>11 (show/N4)
+     LUT4:I2->O          258   0.704   1.509  show/pix_x<1>1 (pix_x<1>)
+     LUT2:I0->O           25   0.704   1.264  b_out201 (b_out_bdd45)
+     LUT4:I3->O           16   0.704   1.209  b_out191 (b_out_bdd39)
+     LUT4:I0->O            3   0.704   0.535  r_out14252 (g_out16063)
+     LUT4:I3->O            1   0.704   0.595  g_out16138_SW0 (N171)
+     LUT4:I0->O            1   0.704   0.000  g_out16138_G (N892)
+     MUXF5:I1->O           1   0.321   0.499  g_out16138 (g_out16138)
+     LUT2:I1->O            1   0.704   0.000  g_out161702 (g_out161702)
+     MUXF5:I0->O           1   0.321   0.499  g_out16170_f5 (g_out16170)
+     LUT4:I1->O            1   0.704   0.499  g_out16202 (g_out16202)
+     LUT4:I1->O            1   0.704   0.595  g_out16485 (g_out16485)
+     LUT4:I0->O            1   0.704   0.424  g_out17060 (g_out17060)
+     LUT4:I3->O            1   0.704   0.424  g_out17243 (g_out17243)
+     LUT4:I3->O            2   0.704   0.451  g_out17272 (g_out17272)
+     LUT4:I3->O            1   0.704   0.455  g_out17319_SW0 (N557)
+     LUT4:I2->O            1   0.704   0.595  g_out17319 (g_out17319)
+     LUT4:I0->O            1   0.704   0.455  g_out112269_SW0 (N561)
+     LUT4:I2->O            1   0.704   0.420  g_out112269 (g_out_OBUF)
+     OBUF:I->O                 3.272          g_out_OBUF (g_out)
+    ----------------------------------------
+    Total                     28.527ns (16.473ns logic, 12.054ns route)
+                                       (57.7% logic, 42.3% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 202.00 secs
+Total CPU time to Xst completion: 201.91 secs
+ 
+--> 
+
+
+Total memory usage is 646352 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+
