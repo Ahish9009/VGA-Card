@@ -17,7 +17,7 @@
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Project ID (random number)</B></TD>
-<TD><xtag-property name="RandomID">91d357237b374451baba6154f35418b6</xtag-property>.<xtag-property name="ProjectID">4548E35121015EABA7A27F94A47D26A4</xtag-property>.<xtag-property name="ProjectIteration">1</xtag-property></TD>
+<TD><xtag-property name="RandomID">888aad9aa4ec431fbdaf555e48dd21b6</xtag-property>.<xtag-property name="ProjectID">4548E35121015EABA7A27F94A47D26A4</xtag-property>.<xtag-property name="ProjectIteration">2</xtag-property></TD>
 <TD BGCOLOR='#FFFF99'><B>Target Package:</B></TD>
 <TD><xtag-property name="TargetPackage">fg320</xtag-property></TD>
 </TR>
@@ -29,7 +29,7 @@
 </TR>
 <TR ALIGN=LEFT>
 <TD BGCOLOR='#FFFF99'><B>Date Generated</B></TD>
-<TD><xtag-property name="Date Generated">2019-11-17T17:12:29</xtag-property></TD>
+<TD><xtag-property name="Date Generated">2019-11-17T17:17:34</xtag-property></TD>
 <TD BGCOLOR='#FFFF99'><B>Tool Flow</B></TD>
 <TD><xtag-property name="ToolFlow">ISE</xtag-property></TD>
 </TR>
@@ -109,32 +109,32 @@
 <LI><xtag-item1>NumNets_Vcc=1</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_CLKPIN=12</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_CNTRLPIN=12</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_DOUBLE=127</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_DOUBLE=89</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_DUMMY=252</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_DUMMYESC=2</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_GLOBAL=13</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_GLOBAL=10</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_HUNIHEX=4</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_INPUT=270</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_IOBOUTPUT=2</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_OMUX=94</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_OMUX=90</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_OUTPUT=97</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_PREBXBY=58</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_PREBXBY=59</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Active_VFULLHEX=7</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_VLONG=1</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Active_VUNIHEX=4</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Active_VUNIHEX=8</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Gnd_DOUBLE=1</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Gnd_INPUT=2</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Gnd_OMUX=2</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Gnd_OMUX=1</xtag-item1></LI>
 <LI><xtag-item1>NumNodesOfType_Gnd_OUTPUT=2</xtag-item1></LI>
-<LI><xtag-item1>NumNodesOfType_Gnd_PREBXBY=3</xtag-item1></LI>
+<LI><xtag-item1>NumNodesOfType_Gnd_PREBXBY=2</xtag-item1></LI>
 </UL>
 </xtag-group>
 <xtag-group><xtag-group-name name="SiteStatistics">SiteStatistics</xtag-group-name>
 <UL>
-<LI><xtag-item1>IBUF-DIFFS=1</xtag-item1></LI>
-<LI><xtag-item1>IBUF-DIFFSI=1</xtag-item1></LI>
-<LI><xtag-item1>IOB-DIFFM=3</xtag-item1></LI>
+<LI><xtag-item1>IBUF-DIFFM=1</xtag-item1></LI>
+<LI><xtag-item1>IBUF-DIFFMI=1</xtag-item1></LI>
+<LI><xtag-item1>IOB-DIFFM=1</xtag-item1></LI>
 <LI><xtag-item1>IOB-DIFFS=2</xtag-item1></LI>
-<LI><xtag-item1>SLICEL-SLICEM=19</xtag-item1></LI>
+<LI><xtag-item1>SLICEL-SLICEM=26</xtag-item1></LI>
 </UL>
 </xtag-group>
 </TD>
@@ -457,6 +457,11 @@
 <LI><xtag-cmdline>par -w -intstyle ise -ol high -t 1 &lt;fname&gt;.ncd &lt;fname&gt;.ncd &lt;fname&gt;.pcf</xtag-cmdline></LI>
 <LI><xtag-cmdline>trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml &lt;fname&gt;.twx &lt;fname&gt;.ncd -o &lt;fname&gt;.twr &lt;fname&gt;.pcf</xtag-cmdline></LI>
 <LI><xtag-cmdline>bitgen -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
+<LI><xtag-cmdline>ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc &lt;fname&gt;.ucf -p xc3s500e-fg320-5 &lt;fname&gt;.ngc &lt;fname&gt;.ngd</xtag-cmdline></LI>
+<LI><xtag-cmdline>map -intstyle ise -p xc3s500e-fg320-5 -cm area -ir off -pr off -c 100 -o &lt;fname&gt;.ncd &lt;fname&gt;.ngd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>par -w -intstyle ise -ol high -t 1 &lt;fname&gt;.ncd &lt;fname&gt;.ncd &lt;fname&gt;.pcf</xtag-cmdline></LI>
+<LI><xtag-cmdline>trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml &lt;fname&gt;.twx &lt;fname&gt;.ncd -o &lt;fname&gt;.twr &lt;fname&gt;.pcf -ucf &lt;fname&gt;.ucf</xtag-cmdline></LI>
+<LI><xtag-cmdline>bitgen -intstyle ise -f &lt;fname&gt;.ut &lt;fname&gt;.ncd</xtag-cmdline></LI>
 </xtag-section></UL></TD></TR>
 </TABLE>
 
@@ -483,22 +488,25 @@
 <TD><xtag-design-property-name>PROP_intProjectCreationTimestamp</xtag-design-property-name>=<xtag-design-property-value>2019-11-17T17:10:36</xtag-design-property-value></TD>
 
 </TR><TR><TD><xtag-design-property-name>PROP_intWbtProjectID</xtag-design-property-name>=<xtag-design-property-value>4548E35121015EABA7A27F94A47D26A4</xtag-design-property-value></TD>
-<TD><xtag-process-property-name>PROP_intWbtProjectIteration</xtag-process-property-name>=<xtag-process-property-value>1</xtag-process-property-value></TD>
+<TD><xtag-process-property-name>PROP_intWbtProjectIteration</xtag-process-property-name>=<xtag-process-property-value>2</xtag-process-property-value></TD>
 
 </TR><TR><TD><xtag-design-property-name>PROP_intWorkingDirLocWRTProjDir</xtag-design-property-name>=<xtag-design-property-value>Same</xtag-design-property-value></TD>
 <TD><xtag-design-property-name>PROP_intWorkingDirUsed</xtag-design-property-name>=<xtag-design-property-value>No</xtag-design-property-value></TD>
 
-</TR><TR><TD><xtag-design-property-name>PROP_AutoTop</xtag-design-property-name>=<xtag-design-property-value>true</xtag-design-property-value></TD>
-<TD><xtag-design-property-name>PROP_DevFamily</xtag-design-property-name>=<xtag-design-property-value>Spartan3E</xtag-design-property-value></TD>
+</TR><TR><TD><xtag-process-property-name>PROP_xilxBitgStart_Clk</xtag-process-property-name>=<xtag-process-property-value>JTAG Clock</xtag-process-property-value></TD>
+<TD><xtag-design-property-name>PROP_AutoTop</xtag-design-property-name>=<xtag-design-property-value>true</xtag-design-property-value></TD>
 
-</TR><TR><TD><xtag-design-property-name>PROP_DevDevice</xtag-design-property-name>=<xtag-design-property-value>xc3s500e</xtag-design-property-value></TD>
-<TD><xtag-design-property-name>PROP_DevFamilyPMName</xtag-design-property-name>=<xtag-design-property-value>spartan3e</xtag-design-property-value></TD>
+</TR><TR><TD><xtag-design-property-name>PROP_DevFamily</xtag-design-property-name>=<xtag-design-property-value>Spartan3E</xtag-design-property-value></TD>
+<TD><xtag-design-property-name>PROP_DevDevice</xtag-design-property-name>=<xtag-design-property-value>xc3s500e</xtag-design-property-value></TD>
 
-</TR><TR><TD><xtag-design-property-name>PROP_DevPackage</xtag-design-property-name>=<xtag-design-property-value>fg320</xtag-design-property-value></TD>
-<TD><xtag-design-property-name>PROP_Synthesis_Tool</xtag-design-property-name>=<xtag-design-property-value>XST (VHDL/Verilog)</xtag-design-property-value></TD>
+</TR><TR><TD><xtag-design-property-name>PROP_DevFamilyPMName</xtag-design-property-name>=<xtag-design-property-value>spartan3e</xtag-design-property-value></TD>
+<TD><xtag-design-property-name>PROP_DevPackage</xtag-design-property-name>=<xtag-design-property-value>fg320</xtag-design-property-value></TD>
 
-</TR><TR><TD><xtag-design-property-name>PROP_DevSpeed</xtag-design-property-name>=<xtag-design-property-value>-5</xtag-design-property-value></TD>
-<TD><xtag-design-property-name>PROP_PreferredLanguage</xtag-design-property-name>=<xtag-design-property-value>Verilog</xtag-design-property-value></TD>
+</TR><TR><TD><xtag-design-property-name>PROP_Synthesis_Tool</xtag-design-property-name>=<xtag-design-property-value>XST (VHDL/Verilog)</xtag-design-property-value></TD>
+<TD><xtag-design-property-name>PROP_DevSpeed</xtag-design-property-name>=<xtag-design-property-value>-5</xtag-design-property-value></TD>
+
+</TR><TR><TD><xtag-design-property-name>PROP_PreferredLanguage</xtag-design-property-name>=<xtag-design-property-value>Verilog</xtag-design-property-value></TD>
+<TD><xtag-source-property-name>FILE_UCF</xtag-source-property-name>=<xtag-source-property-value>1</xtag-source-property-value></TD>
 
 </TR><TR><TD><xtag-source-property-name>FILE_VERILOG</xtag-source-property-name>=<xtag-source-property-value>1</xtag-source-property-value></TD>
 </TR></xtag-section></TABLE>

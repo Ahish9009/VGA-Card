@@ -4,7 +4,7 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 /opt/Xilinx/13.4/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 5 -n
 3 -fastpaths -xml screen_design.twx screen_design.ncd -o screen_design.twr
-screen_design.pcf
+screen_design.pcf -ucf vlsi_proj_ucf.ucf
 
 Design file:              screen_design.ncd
 Physical constraint file: screen_design.pcf
@@ -45,7 +45,7 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-rst         |    2.272(R)|    0.138(R)|clk_BUFGP         |   0.000|
+rst         |    1.907(R)|   -0.030(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -53,11 +53,11 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-b_out       |   13.047(R)|clk_BUFGP         |   0.000|
-g_out       |   14.142(R)|clk_BUFGP         |   0.000|
-h_sync      |    9.107(R)|clk_BUFGP         |   0.000|
-r_out       |   15.020(R)|clk_BUFGP         |   0.000|
-v_sync      |    9.596(R)|clk_BUFGP         |   0.000|
+b_out       |   14.276(R)|clk_BUFGP         |   0.000|
+g_out       |   15.047(R)|clk_BUFGP         |   0.000|
+h_sync      |    9.690(R)|clk_BUFGP         |   0.000|
+r_out       |   16.157(R)|clk_BUFGP         |   0.000|
+v_sync      |   10.424(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -65,18 +65,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.832|         |         |         |
+clk            |    4.419|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sun Nov 17 17:12:22 2019 
+Analysis completed Sun Nov 17 17:17:30 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 347 MB
+Peak Memory Usage: 348 MB
 
 
 
