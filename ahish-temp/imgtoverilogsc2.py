@@ -14,6 +14,7 @@ def scale(x):
 def get_condition(x):
 
     cond = ''
+    sc = 6
     
     for i in range(len(x)):
         flag = 0
@@ -30,10 +31,10 @@ def get_condition(x):
             elif (flag == 1 and (not x[i][j])):
                 end = j
                 flag = 0
-                cond += "| (pix_x >= "+str(start)+" & pix_x <= "+str(end)+" & pix_y == "+str(i)+")"
+                cond += "| (pix_x >= "+str(start*sc)+" & pix_x <= "+str(end*sc + sc-1)+" & pix_y >= "+str(i*sc)+" & pix_y <= " + str(i*sc + sc -1)+ ")"
         
         if x[i][-1] == 1:
-            cond += "| (pix_x >= "+str(start)+" & pix_x <= "+str(end)+" & pix_y == "+str(i)+")"
+            cond += "| (pix_x >= "+str(start*sc)+" & pix_x <= "+str(end*sc + sc-1)+" & pix_y >= "+str(i*sc)+" & pix_y <= " + str(i*sc + sc -1)+ ")"
 
             #if x[i][j]:
                 #cond += "| (pix_x == "+str(j)+" & pix_y == "+str(i) + ")"
@@ -41,7 +42,7 @@ def get_condition(x):
     return cond
 
 img = Image.open("me.png")
-img = img.resize((256,192))
+img = img.resize((100,75))
 
 pix_r = (list(img.getdata(0)))
 pix_g = scale(list(img.getdata(1)))
