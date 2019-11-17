@@ -45,7 +45,7 @@ Setup/Hold to clock clk
             |Max Setup to|Max Hold to |                  | Clock  |
 Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------------+--------+
-rst         |    1.907(R)|   -0.030(R)|clk_BUFGP         |   0.000|
+rst         |    1.760(R)|    0.209(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -53,11 +53,11 @@ Clock clk to Pad
             | clk (edge) |                  | Clock  |
 Destination |   to PAD   |Internal Clock(s) | Phase  |
 ------------+------------+------------------+--------+
-b_out       |   14.276(R)|clk_BUFGP         |   0.000|
-g_out       |   15.047(R)|clk_BUFGP         |   0.000|
-h_sync      |    9.690(R)|clk_BUFGP         |   0.000|
-r_out       |   16.157(R)|clk_BUFGP         |   0.000|
-v_sync      |   10.424(R)|clk_BUFGP         |   0.000|
+b_out       |   14.563(R)|clk_BUFGP         |   0.000|
+g_out       |   12.812(R)|clk_BUFGP         |   0.000|
+h_sync      |    9.954(R)|clk_BUFGP         |   0.000|
+r_out       |   12.412(R)|clk_BUFGP         |   0.000|
+v_sync      |   10.298(R)|clk_BUFGP         |   0.000|
 ------------+------------+------------------+--------+
 
 Clock to Setup on destination clock clk
@@ -65,18 +65,18 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.419|         |         |         |
+clk            |    4.568|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 
-Analysis completed Sun Nov 17 17:17:30 2019 
+Analysis completed Sun Nov 17 18:01:12 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-Peak Memory Usage: 348 MB
+Peak Memory Usage: 347 MB
 
 
 
