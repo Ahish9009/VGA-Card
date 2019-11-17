@@ -9,22 +9,22 @@ Target Device  : xc3s500e
 Target Package : fg320
 Target Speed   : -5
 Mapper Version : spartan3e -- $Revision: 1.55 $
-Mapped Date    : Sun Nov 17 19:14:54 2019
+Mapped Date    : Sun Nov 17 21:10:00 2019
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:    0
 Logic Utilization:
-  Number of Slice Flip Flops:            22 out of   9,312    1%
-  Number of 4 input LUTs:                67 out of   9,312    1%
+  Number of Slice Flip Flops:            24 out of   9,312    1%
+  Number of 4 input LUTs:             1,572 out of   9,312   16%
 Logic Distribution:
-  Number of occupied Slices:             46 out of   4,656    1%
-    Number of Slices containing only related logic:      46 out of      46 100%
-    Number of Slices containing unrelated logic:          0 out of      46   0%
+  Number of occupied Slices:            841 out of   4,656   18%
+    Number of Slices containing only related logic:     841 out of     841 100%
+    Number of Slices containing unrelated logic:          0 out of     841   0%
       *See NOTES below for an explanation of the effects of unrelated logic.
-  Total Number of 4 input LUTs:          85 out of   9,312    1%
-    Number used as logic:                67
+  Total Number of 4 input LUTs:       1,590 out of   9,312   17%
+    Number used as logic:             1,572
     Number used as a route-thru:         18
 
   The Slice Logic Distribution report is not meaningful if the design is
@@ -33,11 +33,11 @@ Logic Distribution:
   Number of bonded IOBs:                  7 out of     232    3%
   Number of BUFGMUXs:                     1 out of      24    4%
 
-Average Fanout of Non-Clock Nets:                2.93
+Average Fanout of Non-Clock Nets:                3.78
 
-Peak Memory Usage:  573 MB
-Total REAL time to MAP completion:  1 secs 
-Total CPU time to MAP completion:   1 secs 
+Peak Memory Usage:  580 MB
+Total REAL time to MAP completion:  2 secs 
+Total CPU time to MAP completion:   2 secs 
 
 NOTES:
 

@@ -134,3 +134,766 @@ Analyzing hierarchy for module <pixel_itr> in library <work> with parameters.
 *                            HDL Analysis                               *
 =========================================================================
 Analyzing top module <screen_design>.
+Module <screen_design> is correct for synthesis.
+ 
+Analyzing module <pixel_itr> in library <work>.
+	h_draw_min = 32'sb00000000000000000000000010100000
+	h_max = 32'sb00000000000000000000001100100000
+	h_sync_end = 32'sb00000000000000000000000001110000
+	h_sync_strt = 32'sb00000000000000000000000000010000
+	v_draw_max = 32'sb00000000000000000000000111011111
+	v_max = 32'sb00000000000000000000001000001100
+	v_sync_end = 32'sb00000000000000000000000111101100
+	v_sync_strt = 32'sb00000000000000000000000111101010
+Module <pixel_itr> is correct for synthesis.
+ 
+
+=========================================================================
+*                           HDL Synthesis                               *
+=========================================================================
+
+Performing bidirectional port resolution...
+
+Synthesizing Unit <pixel_itr>.
+    Related source file is "../ahish-temp/screen_design_optimized_image.v".
+    Found 10-bit comparator greater for signal <draw_active$cmp_gt0000> created at line 49.
+    Found 10-bit comparator less for signal <draw_active$cmp_lt0000> created at line 49.
+    Found 10-bit register for signal <h_pos>.
+    Found 10-bit adder for signal <h_pos$addsub0000> created at line 66.
+    Found 11-bit comparator less for signal <h_pos$cmp_lt0000> created at line 65.
+    Found 10-bit comparator greatequal for signal <h_sync$cmp_ge0000> created at line 38.
+    Found 10-bit comparator less for signal <h_sync$cmp_lt0000> created at line 38.
+    Found 10-bit subtractor for signal <pix_x$addsub0000> created at line 44.
+    Found 10-bit comparator greatequal for signal <pix_x$cmp_ge0000> created at line 44.
+    Found 10-bit comparator lessequal for signal <pix_y$cmp_le0000> created at line 45.
+    Found 10-bit register for signal <v_pos>.
+    Found 10-bit adder for signal <v_pos$addsub0000> created at line 70.
+    Found 10-bit comparator greatequal for signal <v_sync$cmp_ge0000> created at line 39.
+    Found 10-bit comparator less for signal <v_sync$cmp_lt0000> created at line 39.
+    Summary:
+	inferred  20 D-type flip-flop(s).
+	inferred   3 Adder/Subtractor(s).
+	inferred   9 Comparator(s).
+Unit <pixel_itr> synthesized.
+
+
+Synthesizing Unit <screen_design>.
+    Related source file is "../ahish-temp/screen_design_optimized_image.v".
+WARNING:Xst:1780 - Signal <win4> is never used or assigned. This unconnected signal will be trimmed during the optimization process.
+    Found 1-bit register for signal <count>.
+    Found 1-bit register for signal <pix_clk>.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0000> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0001> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0002> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0003> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0004> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0005> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0006> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0007> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0008> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0009> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0010> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0011> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0012> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0013> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0014> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0015> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0016> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0017> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0018> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0019> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0020> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0021> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0022> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0023> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0024> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0025> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0026> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0027> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0028> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0029> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0030> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0031> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0032> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0033> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0034> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0035> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0036> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0037> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0038> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0039> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0040> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0041> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0042> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0043> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0044> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0045> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0046> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0047> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0048> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0049> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0050> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0051> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0052> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0053> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0054> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0055> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0056> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0057> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0058> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0059> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0060> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0061> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0062> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0063> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0064> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0065> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0066> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0067> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0068> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0069> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0070> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0071> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0072> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0073> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0074> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0075> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0076> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0077> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0078> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0079> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0080> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0081> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0082> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0083> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0084> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0085> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0086> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0087> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0088> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0089> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0090> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0091> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0092> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0093> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0094> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0095> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0096> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0097> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0098> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0099> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0100> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0101> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0102> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0103> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0104> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0105> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0106> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0107> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0108> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0109> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0110> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0111> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0112> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0113> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0114> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0115> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0116> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0117> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0118> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0119> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0120> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0121> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0122> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0123> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0124> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0125> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0126> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0127> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0128> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0129> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0130> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0131> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0132> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0133> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0134> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0135> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0136> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0137> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0138> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0139> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0140> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0141> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0142> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0143> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0144> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0145> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0146> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0147> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0148> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0149> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0150> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0151> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0152> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0153> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0154> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0155> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0156> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0157> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0158> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0159> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0160> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0161> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0162> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0163> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0164> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0165> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0166> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0167> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0168> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0169> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0170> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0171> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0172> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0173> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0174> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0175> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0176> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0177> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0178> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0179> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0180> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0181> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0182> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0183> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0184> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0185> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0186> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0187> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0188> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0189> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0190> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0191> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0192> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0193> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0194> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0195> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0196> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0197> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0198> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0199> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0200> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0201> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0202> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0203> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0204> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0205> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0206> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0207> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0208> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0209> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0210> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0211> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0212> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0213> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0214> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0215> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0216> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0217> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0218> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0219> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0220> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0221> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0222> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0223> created at line 134.
+    Found 10-bit comparator greatequal for signal <win1$cmp_ge0224> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0000> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0001> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0002> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0003> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0004> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0005> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0006> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0007> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0008> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0009> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0010> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0011> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0012> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0013> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0014> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0015> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0016> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0017> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0018> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0019> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0020> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0021> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0022> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0023> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0024> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0025> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0026> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0027> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0028> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0029> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0030> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0031> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0032> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0033> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0034> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0035> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0036> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0037> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0038> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0039> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0040> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0041> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0042> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0043> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0044> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0045> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0046> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0047> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0048> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0049> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0050> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0051> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0052> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0053> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0054> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0055> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0056> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0057> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0058> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0059> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0060> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0061> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0062> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0063> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0064> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0065> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0066> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0067> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0068> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0069> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0070> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0071> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0072> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0073> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0074> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0075> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0076> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0077> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0078> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0079> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0080> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0081> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0082> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0083> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0084> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0085> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0086> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0087> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0088> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0089> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0090> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0091> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0092> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0093> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0094> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0095> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0096> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0097> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0098> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0099> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0100> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0101> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0102> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0103> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0104> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0105> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0106> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0107> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0108> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0109> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0110> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0111> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0112> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0113> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0114> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0115> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0116> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0117> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0118> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0119> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0120> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0121> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0122> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0123> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0124> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0125> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0126> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0127> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0128> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0129> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0130> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0131> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0132> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0133> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0134> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0135> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0136> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0137> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0138> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0139> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0140> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0141> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0142> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0143> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0144> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0145> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0146> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0147> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0148> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0149> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0150> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0151> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0152> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0153> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0154> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0155> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0156> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0157> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0158> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0159> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0160> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0161> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0162> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0163> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0164> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0165> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0166> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0167> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0168> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0169> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0170> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0171> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0172> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0173> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0174> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0175> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0176> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0177> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0178> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0179> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0180> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0181> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0182> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0183> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0184> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0185> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0186> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0187> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0188> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0189> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0190> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0191> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0192> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0193> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0194> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0195> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0196> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0197> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0198> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0199> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0200> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0201> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0202> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0203> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0204> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0205> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0206> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0207> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0208> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0209> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0210> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0211> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0212> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0213> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0214> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0215> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0216> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0217> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0218> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0219> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0220> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0221> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0222> created at line 134.
+    Found 10-bit comparator lessequal for signal <win1$cmp_le0223> created at line 134.
+    Summary:
+	inferred   2 D-type flip-flop(s).
+	inferred 449 Comparator(s).
+Unit <screen_design> synthesized.
+
+
+=========================================================================
+HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 1
+# Registers                                            : 4
+ 1-bit register                                        : 2
+ 10-bit register                                       : 2
+# Comparators                                          : 458
+ 10-bit comparator greatequal                          : 228
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 3
+ 10-bit comparator lessequal                           : 225
+ 11-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                       Advanced HDL Synthesis                          *
+=========================================================================
+
+
+=========================================================================
+Advanced HDL Synthesis Report
+
+Macro Statistics
+# Adders/Subtractors                                   : 3
+ 10-bit adder                                          : 2
+ 10-bit subtractor                                     : 1
+# Registers                                            : 22
+ Flip-Flops                                            : 22
+# Comparators                                          : 458
+ 10-bit comparator greatequal                          : 228
+ 10-bit comparator greater                             : 1
+ 10-bit comparator less                                : 3
+ 10-bit comparator lessequal                           : 225
+ 11-bit comparator less                                : 1
+
+=========================================================================
+
+=========================================================================
+*                         Low Level Synthesis                           *
+=========================================================================
+
+Optimizing unit <screen_design> ...
+
+Optimizing unit <pixel_itr> ...
+
+Mapping all equations...
+Building and optimizing final netlist ...
+Found area constraint ratio of 100 (+ 5) on block screen_design, actual ratio is 21.
+FlipFlop show/h_pos_5 has been replicated 1 time(s)
+FlipFlop show/h_pos_7 has been replicated 1 time(s)
+
+Final Macro Processing ...
+
+=========================================================================
+Final Register Report
+
+Macro Statistics
+# Registers                                            : 24
+ Flip-Flops                                            : 24
+
+=========================================================================
+
+=========================================================================
+*                           Partition Report                            *
+=========================================================================
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+=========================================================================
+*                            Final Report                               *
+=========================================================================
+Final Results
+RTL Top Level Output File Name     : screen_design.ngr
+Top Level Output File Name         : screen_design
+Output Format                      : NGC
+Optimization Goal                  : Speed
+Keep Hierarchy                     : No
+
+Design Statistics
+# IOs                              : 7
+
+Cell Usage :
+# BELS                             : 1643
+#      GND                         : 1
+#      INV                         : 3
+#      LUT1                        : 18
+#      LUT2                        : 54
+#      LUT2_L                      : 1
+#      LUT3                        : 227
+#      LUT4                        : 1283
+#      LUT4_D                      : 2
+#      MUXCY                       : 18
+#      MUXF5                       : 15
+#      VCC                         : 1
+#      XORCY                       : 20
+# FlipFlops/Latches                : 24
+#      FDE                         : 22
+#      FDR                         : 2
+# Clock Buffers                    : 1
+#      BUFGP                       : 1
+# IO Buffers                       : 6
+#      IBUF                        : 1
+#      OBUF                        : 5
+=========================================================================
+
+Device utilization summary:
+---------------------------
+
+Selected Device : 3s500efg320-5 
+
+ Number of Slices:                      910  out of   4656    19%  
+ Number of Slice Flip Flops:             24  out of   9312     0%  
+ Number of 4 input LUTs:               1588  out of   9312    17%  
+ Number of IOs:                           7
+ Number of bonded IOBs:                   7  out of    232     3%  
+ Number of GCLKs:                         1  out of     24     4%  
+
+---------------------------
+Partition Resource Summary:
+---------------------------
+
+  No Partitions were found in this design.
+
+---------------------------
+
+
+=========================================================================
+TIMING REPORT
+
+NOTE: THESE TIMING NUMBERS ARE ONLY A SYNTHESIS ESTIMATE.
+      FOR ACCURATE TIMING INFORMATION PLEASE REFER TO THE TRACE REPORT
+      GENERATED AFTER PLACE-and-ROUTE.
+
+Clock Information:
+------------------
+-----------------------------------+------------------------+-------+
+Clock Signal                       | Clock buffer(FF name)  | Load  |
+-----------------------------------+------------------------+-------+
+clk                                | BUFGP                  | 24    |
+-----------------------------------+------------------------+-------+
+
+Asynchronous Control Signals Information:
+----------------------------------------
+No asynchronous control signals found in this design
+
+Timing Summary:
+---------------
+Speed Grade: -5
+
+   Minimum period: 5.125ns (Maximum Frequency: 195.130MHz)
+   Minimum input arrival time before clock: 3.550ns
+   Maximum output required time after clock: 21.499ns
+   Maximum combinational path delay: No path found
+
+Timing Detail:
+--------------
+All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 5.125ns (frequency: 195.130MHz)
+  Total number of paths / destination ports: 530 / 46
+-------------------------------------------------------------------------
+Delay:               5.125ns (Levels of Logic = 3)
+  Source:            show/v_pos_9 (FF)
+  Destination:       show/v_pos_9 (FF)
+  Source Clock:      clk rising
+  Destination Clock: clk rising
+
+  Data Path: show/v_pos_9 to show/v_pos_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             44   0.514   1.079  show/v_pos_9 (show/v_pos_9)
+     LUT4:I3->O            1   0.612   0.360  show/screen_end_cmp_eq000132 (show/screen_end_cmp_eq000132)
+     LUT4_D:I3->LO         1   0.612   0.103  show/screen_end_cmp_eq000134 (N984)
+     LUT4:I3->O           10   0.612   0.750  show/v_pos_not00021 (show/v_pos_not0002)
+     FDE:CE                    0.483          show/v_pos_0
+    ----------------------------------------
+    Total                      5.125ns (2.833ns logic, 2.292ns route)
+                                       (55.3% logic, 44.7% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
+  Total number of paths / destination ports: 22 / 22
+-------------------------------------------------------------------------
+Offset:              3.550ns (Levels of Logic = 2)
+  Source:            rst (PAD)
+  Destination:       show/h_pos_9 (FF)
+  Destination Clock: clk rising
+
+  Data Path: rst to show/h_pos_9
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             2   1.106   0.532  rst_IBUF (rst_IBUF)
+     LUT2:I0->O           12   0.612   0.817  show/h_pos_not00021 (show/h_pos_not0002)
+     FDE:CE                    0.483          show/h_pos_0
+    ----------------------------------------
+    Total                      3.550ns (2.201ns logic, 1.349ns route)
+                                       (62.0% logic, 38.0% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
+  Total number of paths / destination ports: 67027 / 3
+-------------------------------------------------------------------------
+Offset:              21.499ns (Levels of Logic = 15)
+  Source:            show/h_pos_6 (FF)
+  Destination:       r_out (PAD)
+  Source Clock:      clk rising
+
+  Data Path: show/h_pos_6 to r_out
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDE:C->Q             25   0.514   1.223  show/h_pos_6 (show/h_pos_6)
+     LUT2:I0->O           25   0.612   1.101  show/pix_x<8>11 (show/N4)
+     LUT4:I2->O           49   0.612   1.229  show/pix_x<2>1 (pix_x<2>)
+     LUT4:I0->O            9   0.612   0.849  win1_cmp_le00091 (win1_cmp_le00091)
+     LUT3:I0->O            2   0.612   0.410  win1_cmp_le005811 (win1_cmp_le00582)
+     LUT4:I2->O            1   0.612   0.387  SFDecomp_8211_SW0 (N469)
+     LUT4:I2->O            3   0.612   0.454  SFDecomp_8211 (N319)
+     LUT4:I3->O            3   0.612   0.481  SFDecomp_8925 (N810)
+     LUT4:I2->O            1   0.612   0.360  win15384_SW0 (N774)
+     LUT4:I3->O            1   0.612   0.509  win15384 (win15384)
+     LUT4:I0->O            1   0.612   0.509  win15525 (win15525)
+     LUT4:I0->O            1   0.612   0.509  win16247 (win16247)
+     LUT4:I0->O            1   0.612   0.509  win18750 (win18750)
+     LUT2:I0->O            1   0.612   0.360  win110948 (win110948)
+     LUT4:I3->O            1   0.612   0.357  win110961 (r_out_OBUF)
+     OBUF:I->O                 3.169          r_out_OBUF (r_out)
+    ----------------------------------------
+    Total                     21.499ns (12.251ns logic, 9.248ns route)
+                                       (57.0% logic, 43.0% route)
+
+=========================================================================
+
+
+Total REAL time to Xst completion: 149.00 secs
+Total CPU time to Xst completion: 148.35 secs
+ 
+--> 
+
+
+Total memory usage is 579176 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

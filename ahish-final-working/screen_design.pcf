@@ -1,14 +1,14 @@
 //! **************************************************************************
-// Written by: Map O.87xd on Sun Nov 17 19:14:56 2019
+// Written by: Map O.87xd on Sun Nov 17 21:10:02 2019
 //! **************************************************************************
 
 SCHEMATIC START;
-COMP "h_sync" LOCATE = SITE "T4" LEVEL 1;
 COMP "clk" LOCATE = SITE "B8" LEVEL 1;
-COMP "r_out" LOCATE = SITE "R9" LEVEL 1;
-COMP "v_sync" LOCATE = SITE "U3" LEVEL 1;
-COMP "g_out" LOCATE = SITE "N8" LEVEL 1;
 COMP "b_out" LOCATE = SITE "U5" LEVEL 1;
+COMP "g_out" LOCATE = SITE "N8" LEVEL 1;
+COMP "r_out" LOCATE = SITE "R9" LEVEL 1;
+COMP "h_sync" LOCATE = SITE "T4" LEVEL 1;
+COMP "v_sync" LOCATE = SITE "U3" LEVEL 1;
 NET "clk_BUFGP/IBUFG" BEL "clk_BUFGP/BUFG.GCLKMUX" USELOCALCONNECT;
 SCHEMATIC END;
 
