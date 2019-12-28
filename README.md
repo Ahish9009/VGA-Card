@@ -1,9 +1,14 @@
 # VGA Card
+A graphics controller using Nexys 2 FPGA with ability to display images on a VGA interfaced screen. A python script takes in an image as input and gives out the timing vs pixel RGB values for displaying the image on the screen.
 
-## Introduction
-This is a project made by Shivansh and me, for the course VLSI Design.
-It is a basic VGA card that takes in an image file as input, and displays it on a monitor. 
-It has been implemented in both FPGA and ASIC flows, and has been tested on CRT and LCD monitors with a FPGA board.
+## Features
+* Max Resolution: 800x600
+* Max Refresh Rate: 50MHz
 
+## Technologies used
+* Verilog
+* Python (for generating PixelMap)
 
-
+## Authors
+* [Ahish](https://github.com/Ahish9009)
+* [Shivansh Rakesh](https://github.com/ShivanshRakesh)
