@@ -132,9 +132,9 @@ pixel_itr show(
 
 wire win1, win2, win3, win4;
 
-//assign win1 = (pix_y > 400) & (pix_y < 450);
-//assign win2 = (pix_x > 620) & (pix_x < 630);
-//assign win3 = (pix_x > 20) & (pix_x< 640); 
+assign win1 = (pix_y > 400) & (pix_y < 450);
+assign win2 = (pix_x > 620) & (pix_x < 630);
+assign win3 = (pix_x > 20) & (pix_x< 640); 
 //becomes a 853x480 display on 16:9
 
 assign r_out = win1;

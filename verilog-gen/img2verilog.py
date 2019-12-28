@@ -40,7 +40,7 @@ def get_condition(x):
     cond = cond.lstrip("|")
     return cond
 
-img = Image.open("me3.png")
+img = Image.open("img/me3.png")
 img = img.resize((592, 444))
 
 pix_r = (list(img.getdata(0)))
@@ -87,7 +87,7 @@ for i in range(len(lines)):
     else:
         newlines += [lines[i]]
 
-with open("screen_design_optimized_image.v", "w") as f:
+with open("screen_design_optimized.v", "w") as f:
     for i in newlines:
         f.write(i)
 
